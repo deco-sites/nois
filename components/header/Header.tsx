@@ -4,7 +4,6 @@ import type { INavItem } from "./NavItem.tsx";
 import Alert from "./Alert.tsx";
 
 import Navbar from "./Navbar.tsx";
-import Sidebar from "./Sidebar.tsx";
 import { headerHeight } from "./constants.ts";
 
 export interface NavItem {
@@ -43,24 +42,24 @@ export interface Props {
    * @title Enable Top Search terms
    */
   suggestions?: LoaderReturnType<Suggestion | null>;
+
+  href_Instagram?:string | undefined;
 }
 
 function Header({
   // alerts,
   products,
   navItems,
-  suggestions,
+  suggestions,href_Instagram
 }: Props) {
   const searchbar = { ...products, suggestions };
   return (
     <>
       <header style={{ height: headerHeight }}>
-        <div class="fixed w-full z-50 bg-transparent">
-          {navItems && <Navbar items={navItems as INavItem[]} />}
+        <div class=" w-full z-50 bg-transparent px-[80px]">
+          {navItems && <Navbar items={navItems as INavItem[]}  href_Instagram={href_Instagram}/>}
         </div>
-        <div class="fixed md:flex bg-transparent z-50 right-0 top-[70px] w-[40px]">
-          {navItems && <Sidebar items={navItems as INavItem[]} />}
-        </div>
+      
         {/* <Alert alerts={alerts} /> */}
       </header>
     </>
