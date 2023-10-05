@@ -110,7 +110,7 @@ function BannerItem(
           </span>
         </div>
 
-        <Buttons  saibaMaisLink={saibaMaisLink} />
+        <Buttons saibaMaisLink={saibaMaisLink} />
 
         <img
           src={logo}
