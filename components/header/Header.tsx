@@ -43,23 +43,29 @@ export interface Props {
    */
   suggestions?: LoaderReturnType<Suggestion | null>;
 
-  href_Instagram?:string | undefined;
+  href_Instagram?: string | undefined;
 }
 
 function Header({
   // alerts,
   products,
   navItems,
-  suggestions,href_Instagram
+  suggestions,
+  href_Instagram,
 }: Props) {
   const searchbar = { ...products, suggestions };
   return (
     <>
       <header style={{ height: headerHeight }}>
         <div class=" w-full z-50 bg-transparent px-[80px]">
-          {navItems && <Navbar items={navItems as INavItem[]}  href_Instagram={href_Instagram}/>}
+          {navItems && (
+            <Navbar
+              items={navItems as INavItem[]}
+              href_Instagram={href_Instagram}
+            />
+          )}
         </div>
-      
+
         {/* <Alert alerts={alerts} /> */}
       </header>
     </>

@@ -8,7 +8,7 @@ export interface INavItem {
 }
 
 function NavItem({ item }: { item: INavItem }) {
-  const { href, label  } = item;
+  const { href, label } = item;
 
   return (
     <li class=" relative   font-semibold flex items-center pt-[10px] pb-[10px]  h-[70px] ">
@@ -17,7 +17,6 @@ function NavItem({ item }: { item: INavItem }) {
           {label}
         </span>
       </a>
-     
     </li>
   );
 }
