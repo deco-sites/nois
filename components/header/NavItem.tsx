@@ -9,12 +9,12 @@ export interface INavItem {
 }
 
 function NavItem({ item }: { item: INavItem }) {
-  const { href, label, children,  } = item;
+  const { href, label, children } = item;
 
   return (
     <li class=" relative  group font-medium flex items-center border-b-2 border-transparent  b pt-[10px] pb-[10px] box-border h-[70px] ease-out duration-300">
       <a href={href} class="px-4 py-3">
-        <span >
+        <span>
           {label}
           {children && children.length > 0 && (
             <Icon
@@ -43,14 +43,12 @@ function NavItem({ item }: { item: INavItem }) {
                     href={node.href}
                   >
                     <span>{node.label}</span>
-                   
                   </a>
                 </li>
               ))}
             </ul>
           </div>
         )}
-    
     </li>
   );
 }

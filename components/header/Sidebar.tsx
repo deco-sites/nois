@@ -17,7 +17,6 @@ function Sidebar({ interval = 5, items }: Props, logo: LiveImage) {
   return (
     <div id={id}>
       <div class="w-[80px] flex flex-col min-h-[300px]  bg-white pr-8 justify-center items-center ">
-      
         <div class="w-full flex text-center justify-center items-start mb-6">
           <a
             class="transform transition   duration-100 hover:scale-125  text-center justify-center items-start"

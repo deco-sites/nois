@@ -3,7 +3,6 @@ import type { Product, Suggestion } from "deco-sites/std/commerce/types.ts";
 import type { INavItem } from "./NavItem.tsx";
 import Alert from "./Alert.tsx";
 
-
 import Navbar from "./Navbar.tsx";
 import Sidebar from "./Sidebar.tsx";
 import { headerHeight } from "./constants.ts";
@@ -24,9 +23,9 @@ export interface NavItem {
 
 export interface Props {
   // alerts: string[];
-  /** 
+  /**
    * @title Logo
-  */
+   */
 
   /**
    * @title Navigation items
@@ -52,23 +51,17 @@ function Header({
   navItems,
   suggestions,
 }: Props) {
-  const searchbar = { ... products, suggestions };
+  const searchbar = { ...products, suggestions };
   return (
     <>
       <header style={{ height: headerHeight }}>
         <div class="fixed w-full z-50 bg-transparent">
-          {navItems && (
-            <Navbar items={navItems as INavItem[]}  />
-          )}
+          {navItems && <Navbar items={navItems as INavItem[]} />}
         </div>
         <div class="fixed md:flex bg-transparent z-50 right-0 top-[70px] w-[40px]">
-          {navItems && (
-            <Sidebar items={navItems as INavItem[]}/>
-          )}
+          {navItems && <Sidebar items={navItems as INavItem[]} />}
         </div>
         {/* <Alert alerts={alerts} /> */}
-
-       
       </header>
     </>
   );
