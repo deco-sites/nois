@@ -8,6 +8,7 @@ import * as $$$$$0 from "./islands/SliderJS.tsx";
 import * as $$$$$$$$0 from "./sections/Banner.tsx";
 import * as $$$$$$$$1 from "./sections/BannerHome.tsx";
 import * as $$$$$$$$2 from "./sections/BannerSlider.tsx";
+
 import * as $$$$$$$$3 from "./sections/Hero.tsx";
 import * as $$$$$$$$4 from "./sections/ParagraphList.tsx";
 import * as $$$$$$$$5 from "./sections/SimpleTextList.tsx";
@@ -192,6 +193,7 @@ const manifest = {
     "deco-sites/nois/sections/Banner.tsx": $$$$$$$$0,
     "deco-sites/nois/sections/BannerHome.tsx": $$$$$$$$1,
     "deco-sites/nois/sections/BannerSlider.tsx": $$$$$$$$2,
+
     "deco-sites/nois/sections/Hero.tsx": $$$$$$$$3,
     "deco-sites/nois/sections/ParagraphList.tsx": $$$$$$$$4,
     "deco-sites/nois/sections/SimpleTextList.tsx": $$$$$$$$5,
