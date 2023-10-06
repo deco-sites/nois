@@ -1,5 +1,5 @@
 import type { LoaderReturnType } from "$live/types.ts";
-import type { Product, Suggestion } from "deco-sites/std/commerce/types.ts";
+import type { Product, Suggestion } from "apps/commerce/types.ts";
 import type { INavItem } from "./NavItem.tsx";
 import Alert from "./Alert.tsx";
 
