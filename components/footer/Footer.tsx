@@ -104,7 +104,6 @@ function Footer(
         <div class=" w-full flex flex-col divide-y divide-primary-content border-b border-[#9a9a9a79] z-10">
           <FooterContainer>
             <div class="flex sm:hidden mb-4">
-           
             </div>
             {/* Desktop view */}
             <ul class="flex flex-col lg:flex-row justify-start gap-8 lg:justify-between">
@@ -146,9 +145,6 @@ function Footer(
                   </li>
                   <li>
                     <div class="flex flex-row object-center justify-start text-end gap-5">
-                  
-
-                     
                       <a
                         href={Href_Instagram}
                         target="_blank"
@@ -167,7 +163,6 @@ function Footer(
                   </li>
                 </ul>
               </li>
-            
             </ul>
           </FooterContainer>
         </div>
