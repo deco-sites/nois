@@ -52,7 +52,7 @@ export interface Props {
 }
 
 function Header({
-   alerts,
+  alerts,
   products,
   navItems,
   suggestions,
@@ -61,10 +61,8 @@ function Header({
   const searchbar = { ...products, suggestions };
   return (
     <>
- 
       <header style={{ height: headerHeight }}>
-
-        {alerts &&  <Alert alerts={alerts} />  }
+        {alerts && <Alert alerts={alerts} />}
 
         <div class=" w-full z-50 bg-transparent pt-[35px] px-[80px]">
           {navItems && (
@@ -74,8 +72,6 @@ function Header({
             />
           )}
         </div>
-
-    
       </header>
     </>
   );
