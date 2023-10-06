@@ -33,31 +33,29 @@ export interface Props {
   navItems?: NavItem[] | undefined;
 
   /**
-   * @title Product suggestions
-   * @description Product suggestions displayed on search
+   * @title Instagram Nois
    */
-  products?: LoaderReturnType<Product[] | null>;
-
-  /**
-   * @title Enable Top Search terms
-   */
-  suggestions?: LoaderReturnType<Suggestion | null>;
 
   href_Instagram?: string | undefined;
+
+  /**
+   * @title Alert message
+   */
+  alerts?: string[];
 }
 
 function Header({
-  // alerts,
-  products,
+  alerts,
+
   navItems,
-  suggestions,
   href_Instagram,
 }: Props) {
-  const searchbar = { ...products, suggestions };
   return (
     <>
-      <header style={{ height: headerHeight }}>
-        <div class=" w-full z-50 bg-transparent px-[80px]">
+      <header>
+        {alerts && <Alert alerts={alerts} />}
+
+        <div class=" w-full absolute  z-50 bg-transparent mt-10 px-[80px]">
           {navItems && (
             <Navbar
               items={navItems as INavItem[]}
@@ -65,8 +63,6 @@ function Header({
             />
           )}
         </div>
-
-        {/* <Alert alerts={alerts} /> */}
       </header>
     </>
   );
