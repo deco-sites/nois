@@ -1,5 +1,5 @@
 import type { LoaderReturnType } from "$live/types.ts";
-import type { Product, Suggestion } from "deco-sites/std/commerce/types.ts";
+import type { Product, Suggestion } from "apps/commerce/types.ts";
 import type { INavItem } from "./NavItem.tsx";
 import Alert from "./Alert.tsx";
 
@@ -33,31 +33,31 @@ export interface Props {
   navItems?: NavItem[] | undefined;
 
   /**
-   * @title Product suggestions
-   * @description Product suggestions displayed on search
+   * @title Instagram Nois
    */
-  products?: LoaderReturnType<Product[] | null>;
-
-  /**
-   * @title Enable Top Search terms
-   */
-  suggestions?: LoaderReturnType<Suggestion | null>;
 
   href_Instagram?: string | undefined;
+
+  /**
+   * @title Alert message
+   */
+  alerts?: string[];
 }
 
 function Header({
-  // alerts,
+
+  alerts,
   products,
+
   navItems,
-  suggestions,
   href_Instagram,
 }: Props) {
-  const searchbar = { ...products, suggestions };
   return (
     <>
       <header style={{ height: headerHeight }}>
-        <div class=" w-full z-50 bg-transparent px-[80px]">
+        {alerts && <Alert alerts={alerts} />}
+
+        <div class=" w-full z-50 bg-transparent pt-[35px] px-[80px]">
           {navItems && (
             <Navbar
               items={navItems as INavItem[]}
@@ -65,8 +65,6 @@ function Header({
             />
           )}
         </div>
-
-        {/* <Alert alerts={alerts} /> */}
       </header>
     </>
   );
