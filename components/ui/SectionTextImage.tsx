@@ -19,24 +19,25 @@ export default function BannnerGrid({
   text,
 }: Props) {
   return (
-    <section class="container flex flex-row justify-center items-center w-full md:px-0 mx-auto bg-[#1E2D32]">
-      <div class=" flex flex-col justify-center items-start gap-4">
+    <div class="w-full bg-[#1E2D32]">
+    <section class="container flex flex-row justify-around items-center w-full mx-auto h-[640px]">
+      <div class=" flex flex-col justify-center items-start gap-2 max-w-[560px]">
         {nameSection &&
           (
             <div class="flex   text-left ">
-              <h2 class="text-lg leading-5 font-semibold uppercase">
+              <h2 class="text-lg text-[#76DBD3] font-bold ">
                 {nameSection}
               </h2>
             </div>
           )}
         {title &&
           (
-            <div class="flex   text-left">
-              <h2 class="text-lg leading-5 font-semibold uppercase">
+            <div class="flex  flex-col text-left text-5xl mb-[40px]">
+              <h2 class="  text-[#76DBD3] font-bold uppercase">
                 {title}
               </h2>
               {titleHighlight && (
-                <h2 class="text-lg leading-5 font-semibold uppercase">
+                <h2 class="  font-extrabold uppercase text-transparent bg-clip-text bg-gradient-to-t from-[#83bee3]  to-[#7dcbdc] ">
                   {titleHighlight}
                 </h2>
               )}
@@ -44,8 +45,8 @@ export default function BannnerGrid({
           )}
         {text &&
           (
-            <div class=" flex text-left">
-              <span class="text-2xl leading-5  text-white">
+            <div class=" flex text-left w-[500px]">
+              <span class="text-xl  text-white">
                 {text}
               </span>
             </div>
@@ -79,5 +80,6 @@ export default function BannnerGrid({
           )}
       </div>
     </section>
+    </div>
   );
 }
