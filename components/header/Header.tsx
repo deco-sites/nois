@@ -37,17 +37,27 @@ export interface Props {
    */
 
   href_Instagram?: string | undefined;
+
+  /**
+   * @title Alert message
+   */
+  alerts?: string[];
 }
 
 function Header({
-  // alerts,
+
+  alerts,
+  products,
+
   navItems,
   href_Instagram,
 }: Props) {
   return (
     <>
       <header style={{ height: headerHeight }}>
-        <div class=" w-full z-50 bg-transparent px-[80px]">
+        {alerts && <Alert alerts={alerts} />}
+
+        <div class=" w-full z-50 bg-transparent pt-[35px] px-[80px]">
           {navItems && (
             <Navbar
               items={navItems as INavItem[]}
@@ -55,8 +65,6 @@ function Header({
             />
           )}
         </div>
-
-        {/* <Alert alerts={alerts} /> */}
       </header>
     </>
   );
