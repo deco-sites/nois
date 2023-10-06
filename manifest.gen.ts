@@ -3,23 +3,27 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $$$$$$0 from "./sections/Banner.tsx";
-import * as $$$$$$1 from "./sections/BannerSlider.tsx";
-import * as $$$$$$2 from "./sections/Header.tsx";
-import * as $$$$$$3 from "./sections/Hero.tsx";
-import * as $$$$$$4 from "./sections/ParagraphList.tsx";
-import * as $$$$$$5 from "./sections/SimpleTextList.tsx";
-import * as $$$$$$6 from "./sections/Theme.tsx";
+import * as $$$$$$1 from "./sections/BannerHome.tsx";
+import * as $$$$$$2 from "./sections/BannerSlider.tsx";
+import * as $$$$$$3 from "./sections/Header.tsx";
+import * as $$$$$$4 from "./sections/Hero.tsx";
+import * as $$$$$$5 from "./sections/ParagraphList.tsx";
+import * as $$$$$$6 from "./sections/SectionTextImage.tsx";
+import * as $$$$$$7 from "./sections/SimpleTextList.tsx";
+import * as $$$$$$8 from "./sections/Theme.tsx";
 import * as $$$$$$$$$$$0 from "./apps/site.ts";
 
 const manifest = {
   "sections": {
     "deco-sites/nois/sections/Banner.tsx": $$$$$$0,
-    "deco-sites/nois/sections/BannerSlider.tsx": $$$$$$1,
-    "deco-sites/nois/sections/Header.tsx": $$$$$$2,
-    "deco-sites/nois/sections/Hero.tsx": $$$$$$3,
-    "deco-sites/nois/sections/ParagraphList.tsx": $$$$$$4,
-    "deco-sites/nois/sections/SimpleTextList.tsx": $$$$$$5,
-    "deco-sites/nois/sections/Theme.tsx": $$$$$$6,
+    "deco-sites/nois/sections/BannerHome.tsx": $$$$$$1,
+    "deco-sites/nois/sections/BannerSlider.tsx": $$$$$$2,
+    "deco-sites/nois/sections/Header.tsx": $$$$$$3,
+    "deco-sites/nois/sections/Hero.tsx": $$$$$$4,
+    "deco-sites/nois/sections/ParagraphList.tsx": $$$$$$5,
+    "deco-sites/nois/sections/SectionTextImage.tsx": $$$$$$6,
+    "deco-sites/nois/sections/SimpleTextList.tsx": $$$$$$7,
+    "deco-sites/nois/sections/Theme.tsx": $$$$$$8,
   },
   "apps": {
     "deco-sites/nois/apps/site.ts": $$$$$$$$$$$0,

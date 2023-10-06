@@ -45,9 +45,7 @@ export interface Props {
 }
 
 function Header({
-
   alerts,
-  products,
 
   navItems,
   href_Instagram,
