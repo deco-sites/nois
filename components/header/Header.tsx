@@ -32,28 +32,19 @@ export interface Props {
    */
   navItems?: NavItem[] | undefined;
 
-  /**
-   * @title Product suggestions
-   * @description Product suggestions displayed on search
-   */
-  products?: LoaderReturnType<Product[] | null>;
 
   /**
-   * @title Enable Top Search terms
+   * @title Instagram Nois
    */
-  suggestions?: LoaderReturnType<Suggestion | null>;
 
   href_Instagram?: string | undefined;
 }
 
 function Header({
   // alerts,
-  products,
   navItems,
-  suggestions,
   href_Instagram,
 }: Props) {
-  const searchbar = { ...products, suggestions };
   return (
     <>
       <header style={{ height: headerHeight }}>
