@@ -32,7 +32,6 @@ export interface Props {
    */
   navItems?: NavItem[] | undefined;
 
-
   /**
    * @title Instagram Nois
    */
