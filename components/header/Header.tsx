@@ -52,10 +52,10 @@ function Header({
 }: Props) {
   return (
     <>
-      <header style={{ height: headerHeight }}>
+      <header>
         {alerts && <Alert alerts={alerts} />}
 
-        <div class=" w-full z-50 bg-transparent pt-[35px] px-[80px]">
+        <div class=" w-full absolute  z-50 bg-transparent mt-10 px-[80px]">
           {navItems && (
             <Navbar
               items={navItems as INavItem[]}
