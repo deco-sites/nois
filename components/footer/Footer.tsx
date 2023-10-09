@@ -151,7 +151,7 @@ function Footer(
                 />
               </a>
             </div>
-          </FooterContainer>
+          </FooterContainer> 
         </div>
       </footer>
     </>
