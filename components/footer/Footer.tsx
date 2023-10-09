@@ -70,7 +70,7 @@ function FooterContainer(
 export interface Props {
   Service: string;
   Href_Instagram: string;
- 
+
   sections?: Section[];
 }
 
@@ -79,8 +79,6 @@ function Footer(
     sections = [],
     Service,
     Href_Instagram,
-  
-    
   }: Props,
 ) {
   return (
@@ -88,7 +86,6 @@ function Footer(
       <footer class="relative w-full flex flex-col bg-[#1E2D32]  text-[#76DBD3] px-20">
         <div class=" w-full flex flex-col border-b border-[#76DBD3] z-10">
           <FooterContainer>
-         
             {/* Desktop view */}
             <ul class="flex flex-col  justify-start gap-8 ">
               {sections.map((section) => (
@@ -112,19 +109,15 @@ function Footer(
               ))}
 
               <li class='class="text-[14px]'>
-                <span >
+                <span>
                   Fale Conosco
                 </span>
                 <ul class="flex flex-col gap-2 pt-2 flex-wrap">
-                   
                   <li>
-                      
-                  </li>
-                                  
-                  <li>
-                      
                   </li>
 
+                  <li>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -133,40 +126,34 @@ function Footer(
 
         <div class="w-full ">
           <FooterContainer class="flex flex-row justify-between w-full">
-            
-              <div>
-                <span class="text-xs">
-                  Cookie setting
-                   
-                </span>
+            <div>
+              <span class="text-xs">
+                Cookie setting
+              </span>
 
-                <span  class="text-xs">
-                  © 2023 nois Labs, Inc.
-                  </span>
-              </div>
-              <div class="flex flex-row object-center justify-start text-end gap-5">
-                <a
-                  href={Href_Instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram logo"
-                >
-                  <Icon
-                    class=" text-[#76DBD3] pb-1"
-                    width={32}
-                    height={32}
-                    id="Instagram"
-                    strokeWidth={2}
-                  />
-                </a>
-              </div>        
-
-           
+              <span class="text-xs">
+                © 2023 nois Labs, Inc.
+              </span>
+            </div>
+            <div class="flex flex-row object-center justify-start text-end gap-5">
+              <a
+                href={Href_Instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram logo"
+              >
+                <Icon
+                  class=" text-[#76DBD3] pb-1"
+                  width={32}
+                  height={32}
+                  id="Instagram"
+                  strokeWidth={2}
+                />
+              </a>
+            </div>
           </FooterContainer>
-      </div>
+        </div>
       </footer>
-
-   
     </>
   );
 }
