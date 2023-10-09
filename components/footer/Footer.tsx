@@ -1,9 +1,8 @@
 import Icon, { AvailableIcons } from "$store/components/ui/Icon.tsx";
 import type { ComponentChildren } from "preact";
-import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
-import Image from "deco-sites/std/components/Image.tsx";
 
 export type IconItem = { icon: AvailableIcons; href: string };
+
 export type StringItem = {
   label: string;
   href?: string;
@@ -21,42 +20,15 @@ export type Item = StringItem | IconItem;
 
 export type Section = {
   label: string;
-  children: Item[];
+  href?: string;
+  bold?: boolean;
 };
 
 const isIcon = (item: Item): item is IconItem =>
   // deno-lint-ignore no-explicit-any
   typeof (item as any)?.icon === "string";
 
-function SectionItem({ item }: { item: Item }) {
-  return (
-    <span class="text-white text-[14px]">
-      {isIcon(item)
-        ? (
-          <div class="border-white border border-solid py-1.5 px-2.5">
-            <Icon
-              id={item.icon}
-              width={25}
-              height={20}
-              strokeWidth={0.01}
-            />
-          </div>
-        )
-        : (
-          item.href
-            ? (
-              <a
-                href={item.href}
-                target={item.target ? `_${item.target}` : "_blank"}
-              >
-                {item.label}
-              </a>
-            )
-            : <span>{item.label}</span>
-        )}
-    </span>
-  );
-}
+
 
 function FooterContainer(
   { children, class: _class = "" }: {
@@ -68,70 +40,106 @@ function FooterContainer(
 }
 
 export interface Props {
-  Service: string;
   Href_Instagram: string;
-
   sections?: Section[];
+
+
 }
 
 function Footer(
   {
     sections = [],
-    Service,
+
     Href_Instagram,
   }: Props,
 ) {
+  const icon = "/LogoGrad.png";
+  const logo = "/LogoNois.svg";
+  const arrow = "/arrowup.svg";
+
+
+
   return (
     <>
-      <footer class="relative w-full flex flex-col bg-[#1E2D32]  text-[#76DBD3] px-20">
+      <footer class="relative w-full flex flex-col bg-[#1E2D32]  text-[#76DBD3] px-20  pt-20">
         <div class=" w-full flex flex-col border-b border-[#76DBD3] z-10">
-          <FooterContainer>
+          <FooterContainer class="">
             {/* Desktop view */}
-            <ul class="flex flex-col  justify-start gap-8 ">
+          
+            <div class='flex flex-col text-xl'> 
+              <span>
+                  Tem dúvidas ou precisa de mais informações?
+              </span> 
+              <span>
+                nois@hotmail.com
+              </span>
+            
+            </div>
+            <img
+                src={icon}
+                width={50}
+                height={55}
+                class="shrink-0 w-auto  my-10"
+                alt={"Icon nois"}
+                loading={"lazy"}
+              />
+
+            <ul class="flex flex-col mb-10 text-xl">
               {sections.map((section) => (
                 <li>
-                  <span class="text-[14px]">
+                  <a href={section.href} class={`${section.bold && "font-semibold"}`}>
                     {section.label}
-                  </span>
-
-                  <ul
-                    class={`flex ${
-                      isIcon(section.children[0]) ? "flex-row" : "flex-col"
-                    } gap-2 pt-2 flex-wrap`}
-                  >
-                    {section.children.map((item) => (
-                      <li>
-                        <SectionItem item={item} />
-                      </li>
-                    ))}
-                  </ul>
+                  </a>              
                 </li>
-              ))}
-
-              <li class='class="text-[14px]'>
-                <span>
-                  Fale Conosco
-                </span>
-                <ul class="flex flex-col gap-2 pt-2 flex-wrap">
-                  <li>
-                  </li>
-
-                  <li>
-                  </li>
-                </ul>
-              </li>
+              ))}             
             </ul>
+
+            <div class=" flex flex-row justify-between w-full items-end gap-6 text-xl shrink-0">
+              <div class='flex flex-row items-end gap-10'>
+                  <a href="/" aria-label="Page logo" class="block w-[120px]  ">
+                    <img
+                      src={logo}
+                      width={120}
+                      height={50}
+                      class="shrink-0 w-auto "
+                      alt={"Logo nois"}
+                      loading={"lazy"}
+                    />
+                  </a>
+                  <a href="/" aria-label="Page logo link" >nois.com.br</a>
+              </div>
+           
+            
+                  <a
+                    href={''}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="arrow up"
+                  >
+                  <img
+                      src={arrow}
+                      width={50}
+                      height={50}
+                      class="shrink-0 w-auto "
+                      alt={"arrow up"}
+                      loading={"lazy"}
+                    />
+                  </a>
+             
+             
+
+             </div>
           </FooterContainer>
         </div>
 
         <div class="w-full ">
           <FooterContainer class="flex flex-row justify-between w-full">
-            <div>
-              <span class="text-xs">
+            <div class='flex flex-row gap-10'>
+              <span class="text-base">
                 Cookie setting
               </span>
 
-              <span class="text-xs">
+              <span class="text-base">
                 © 2023 nois Labs, Inc.
               </span>
             </div>
@@ -143,9 +151,9 @@ function Footer(
                 aria-label="Instagram logo"
               >
                 <Icon
-                  class=" text-[#76DBD3] pb-1"
-                  width={32}
-                  height={32}
+                  class=" text-[#76DBD3] "
+                  width={30}
+                  height={30}
                   id="Instagram"
                   strokeWidth={2}
                 />
