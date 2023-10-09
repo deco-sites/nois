@@ -1,10 +1,6 @@
-import type { LoaderReturnType } from "$live/types.ts";
-import type { Product, Suggestion } from "apps/commerce/types.ts";
 import type { INavItem } from "./NavItem.tsx";
 import Alert from "./Alert.tsx";
-
 import Navbar from "./Navbar.tsx";
-import { headerHeight } from "./constants.ts";
 
 export interface NavItem {
   label: string;
@@ -25,19 +21,15 @@ export interface Props {
   /**
    * @title Logo
    */
-
   /**
    * @title Navigation items
    * @description Navigation items used both on mobile and desktop menus
    */
   navItems?: NavItem[] | undefined;
-
   /**
    * @title Instagram Nois
    */
-
   href_Instagram?: string | undefined;
-
   /**
    * @title Alert message
    */
@@ -55,7 +47,7 @@ function Header({
       <header>
         {alerts && <Alert alerts={alerts} />}
 
-        <div class=" w-full absolute  z-50 bg-transparent mt-10 px-[80px]">
+        <div class=" w-full absolute  z-50 bg-transparent mt-10 px-20">
           {navItems && (
             <Navbar
               items={navItems as INavItem[]}
