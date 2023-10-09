@@ -55,7 +55,7 @@ function Header({
       <header>
         {alerts && <Alert alerts={alerts} />}
 
-        <div class=" w-full absolute  z-50 bg-transparent mt-10 px-[80px]">
+        <div class=" w-full absolute  z-50 bg-transparent mt-10 px-20">
           {navItems && (
             <Navbar
               items={navItems as INavItem[]}

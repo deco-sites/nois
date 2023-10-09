@@ -45,7 +45,7 @@ function Buttons({ saibaMaisLink }: { saibaMaisLink: string }) {
   return (
     <a
       href={saibaMaisLink}
-      class="flex cursor-pointer items-center justify-center z-10 col-start-1 row-start-2 border-2 text-[20px] px-[25px] py-[10px] mb-14 rounded-full border-[#76bdd3]"
+      class="flex cursor-pointer items-center justify-center z-10 col-start-1 row-start-2 border-2 text-[20px] px-[25px] py-[10px] mb-8 rounded-full border-[#76bdd3]"
     >
       Saiba mais
     </a>
@@ -94,7 +94,7 @@ function BannerItem(
         />
       </Picture>
 
-      <div class="absolute top-[120px] bottom-0 m-auto left-0 right-0  flex flex-col justify-center items-center w-full gap-8  text-[#76DBD3] ">
+      <div class="absolute top-[100px] bottom-0 m-auto left-0 right-0  flex flex-col justify-center items-center w-full gap-8   text-[#76DBD3] ">
         <div class=" flex flex-col justify-center items-center w-full gap-8 mb-10  text-[#76DBD3]">
           <span class="text-6xl font-medium text-base-100">
             {action!.title}
@@ -116,7 +116,7 @@ function BannerItem(
           src={logo}
           width={60}
           height={65}
-          class="shrink-0 w-auto mt-10 "
+          class="shrink-0 w-auto mt-8 "
           alt={"Icon nois"}
           loading={"lazy"}
         />
