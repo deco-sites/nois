@@ -13,6 +13,7 @@ import * as $$$$$$7 from "./sections/SectionTextImage.tsx";
 import * as $$$$$$8 from "./sections/SimpleTextList.tsx";
 import * as $$$$$$9 from "./sections/TextImageOptions.tsx";
 import * as $$$$$$10 from "./sections/Theme.tsx";
+import * as $$$$$$11 from "./sections/WhoWeAre.tsx";
 import * as $$$$$$$$$$$0 from "./apps/site.ts";
 
 const manifest = {
@@ -28,6 +29,7 @@ const manifest = {
     "deco-sites/nois/sections/SimpleTextList.tsx": $$$$$$8,
     "deco-sites/nois/sections/TextImageOptions.tsx": $$$$$$9,
     "deco-sites/nois/sections/Theme.tsx": $$$$$$10,
+    "deco-sites/nois/sections/WhoWeAre.tsx": $$$$$$11,
   },
   "apps": {
     "deco-sites/nois/apps/site.ts": $$$$$$$$$$$0,
