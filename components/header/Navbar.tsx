@@ -11,7 +11,7 @@ function Navbar(
   return (
     <>
       {/* Desktop Version */}
-      <div class="flex flex-row justify-between items-center w-full">
+      <div class="flex flex-row justify-between items-center w-full ">
         <div class={"w-[480px] flex justify-start items-center text-base"}>
           <ul class="flex justify-start font-medium text-[#76DBD3]  shrink-0  ">
             {items.map((item) => <NavItem item={item} />)}

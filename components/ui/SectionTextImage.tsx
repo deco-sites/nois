@@ -10,14 +10,7 @@ export interface Props {
   altImage?: string;
   texts?: Text[];
 }
-export type Text = {
-  text: string;
-  size?: 48 | 36 | 20 | 18;
-  gradient?: boolean;
-  bold: "semibold" | "bold" | "none";
-  italic: boolean;
-  color: "black" | "white" | "green";
-};
+
 export default function BannnerGrid({
   title,
   titleHighlight,
@@ -27,8 +20,8 @@ export default function BannnerGrid({
   texts,
 }: Props) {
   return (
-    <div class="w-full bg-[#1E2D32] px-[80px] py-[40px]">
-      <section class="flex flex-row justify-around items-center w-full mx-auto min-h-[640px]">
+    <div class="w-full bg-[#1E2D32] px-[100px] py-[40px]">
+      <section class="flex flex-row justify-between items-center w-full mx-auto min-h-[640px]">
         <div class=" flex flex-col justify-center items-start gap-2 max-w-[690px] ">
           <div class="flex  flex-col text-left text-5xl mb-[40px]">
             <span class=" uppercase text-transparent bg-clip-text bg-gradient-to-t from-[#9990FF]  to-[#76DBD3] ">
@@ -39,7 +32,7 @@ export default function BannnerGrid({
 
           {text &&
             (
-              <div class=" flex text-left w-[690px]">
+              <div class=" flex text-left w-full">
                 <span class="text-[23px]  text-white">
                   {text}
                 </span>
