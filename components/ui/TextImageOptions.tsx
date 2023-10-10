@@ -36,7 +36,7 @@ const COLOR = {
   "white": "text-white",
   "green": " text-[#76DBD3]",
   "gradient":
-    " text-transparent  bg-clip-text bg-gradient-to-t from-[#9990FF]  to-[#76DBD3]",
+    "text-transparent  bg-clip-text bg-gradient-to-t from-[#9990FF]  to-[#76DBD3]",
 };
 export default function BannnerGrid({
   text,
