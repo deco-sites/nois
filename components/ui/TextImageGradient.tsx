@@ -37,15 +37,15 @@ const COLOR = {
   "black": "text-black",
   "white": "text-white",
   "green": " text-[#76DBD3]",
-  "gradient":"text-transparent  bg-clip-text bg-gradient-to-t from-[#9990FF] to-[#76DBD3]",
+  "gradient":
+    "text-transparent  bg-clip-text bg-gradient-to-t from-[#9990FF] to-[#76DBD3]",
 };
 
-export default function BannnerGrid({text,altImage,image,texts}: Props){
-
+export default function BannnerGrid({ text, altImage, image, texts }: Props) {
   return (
     <div class="w-full bg-[#1E2D32] py-[40px]  ">
       <section class="flex items-center w-full h-[650px] bg-gradient-to-b from-[#9990FF]  to-[#76DBD3]  px-[100px] rounded-b-[50px] ">
-      <div class=" flex flex-col justify-center items-start gap-2 max-w-[540px] ">
+        <div class=" flex flex-col justify-center items-start gap-2 max-w-[540px] ">
           <div class="flex  flex-col text-left  mb-[40px]">
             <span class=" ">
               {texts && texts.map((text) => (
