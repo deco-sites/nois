@@ -16,7 +16,6 @@ export type Text = {
   color: "black" | "white" | "green" | "gradient";
   uppercase: boolean;
   lineBreak: boolean;
-
 };
 
 const BOLDS = {
@@ -60,7 +59,7 @@ export default function BannnerGrid({
                 ${SIZE[text.size]}`}
                 >
                   {text.label + " "}
-                  {text.lineBreak && <br/>}
+                  {text.lineBreak && <br />}
                 </span>
               ))}
             </span>
