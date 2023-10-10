@@ -14,7 +14,7 @@ export type Text = {
   bold: "semibold" | "bold" | "none";
   italic: boolean;
   color: "black" | "white" | "green" | "gradient";
-  uppercase: boolean ;
+  uppercase: boolean;
 };
 
 const BOLDS = {
@@ -34,7 +34,8 @@ const COLOR = {
   "black": "text-black",
   "white": "text-white",
   "green": " text-[#76DBD3]",
-  "gradient": " text-transparent  bg-clip-text bg-gradient-to-t from-[#9990FF]  to-[#76DBD3]",
+  "gradient":
+    " text-transparent  bg-clip-text bg-gradient-to-t from-[#9990FF]  to-[#76DBD3]",
 };
 export default function BannnerGrid({
   text,
@@ -48,27 +49,30 @@ export default function BannnerGrid({
         <div class=" flex flex-col justify-center items-start gap-2 max-w-[540px] ">
           <div class="flex  flex-col text-left  mb-[40px]">
             <span class=" ">
-            {texts && texts.map((text) => (
-                <span  class={`  ${BOLDS[text.bold]}
+              {texts && texts.map((text) => (
+                <span
+                  class={`  ${BOLDS[text.bold]}
                 ${COLOR[text.color]}
                 ${text.italic && "italic"}
                 ${text.uppercase && "uppercase"}
-                ${SIZE[text.size]}`}>
-                    {text.label + " "}
-                </span> 
+                ${SIZE[text.size]}`}
+                >
+                  {text.label + " "}
+                </span>
               ))}
-                       
             </span>
           </div>
 
           {text &&
             (
               <div class=" flex text-left w-full">
-                <span  class={`  ${BOLDS[text.bold]}
+                <span
+                  class={`  ${BOLDS[text.bold]}
                 ${COLOR[text.color]}
                 ${text.italic && "italic"}
                 ${text.uppercase && "uppercase"}
-                ${SIZE[text.size]}`}>
+                ${SIZE[text.size]}`}
+                >
                   {text.label}
                 </span>
               </div>
