@@ -10,8 +10,8 @@ export interface Props {
 }
 export type Text = {
   label: string;
-  size: 48 | 40 | 36 | 20 | 18;
-  bold: "semibold" | "bold" | "none";
+  size: 48 | 40 | 36 | 30 | 24 | 20 | 18 | 16 | 14 | 12 ;
+  bold: "extralight"| "light"| "medium" | "normal"|"semibold"|"bold"|"font-extrabold";
   italic: boolean;
   color: "black" | "white" | "green" | "gradient";
   uppercase: boolean;
@@ -19,16 +19,25 @@ export type Text = {
 };
 
 const BOLDS = {
-  "semibold": "font-semibold",
-  "bold": "font-bold",
-  "none": "",
+  "extralight"      :"font-extralight",
+  "light"           :"font-light",
+  "medium"          :"font-medium",
+  "normal"          :"font-normal",
+  "semibold"        :"font-semibold",
+  "bold"            :"font-bold",
+  "font-extrabold"  :"font-extrabold",
 };
 const SIZE = {
   48: "text-5xl",
   40: "text-[40px]",
   36: "text-4xl",
+  30: "text-3xl",
+  24: "text-2xl",
   20: "text-xl",
   18: "text-lg",
+  16: "text-base",
+  14: "text-sm",
+  12: "text-xs-",
 };
 
 const COLOR = {
@@ -45,8 +54,8 @@ export default function BannnerGrid({
   texts,
 }: Props) {
   return (
-    <div class="w-full bg-[#1E2D32] px-[100px] py-[40px]  ">
-      <section class="flex flex-row justify-between items-center w-full mx-auto h-full">
+    <div class="w-full bg-[#1E2D32]  py-[70px]  ">
+      <section class="flex flex-row justify-between items-center w-full mx-auto h-full px-[100px]">
         <div class=" flex flex-col justify-center items-start gap-2 max-w-[540px] ">
           <div class="flex  flex-col text-left  mb-[40px]">
             <span class=" ">

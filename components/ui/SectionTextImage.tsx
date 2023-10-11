@@ -8,7 +8,6 @@ export interface Props {
   text?: string;
   image?: LiveImage;
   altImage?: string;
-  texts?: Text[];
 }
 
 export default function BannnerGrid({
@@ -17,10 +16,9 @@ export default function BannnerGrid({
   image,
   altImage,
   text,
-  texts,
 }: Props) {
   return (
-    <div class="w-full bg-[#1E2D32] px-[100px] py-[40px]">
+    <div class="w-full bg-[#1E2D32] px-[100px] py-[70px]">
       <section class="flex flex-row justify-between items-center w-full mx-auto min-h-[640px]">
         <div class=" flex flex-col justify-center items-start gap-2 max-w-[690px] ">
           <div class="flex  flex-col text-left text-5xl mb-[40px]">
