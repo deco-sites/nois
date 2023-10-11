@@ -13,8 +13,8 @@ export type Img = {
   desktop: LiveImage;
   mobile?: LiveImage;
   altImage?: string;
-  scale: "1"| "1.05" | "1.10"  | "1.25"  | "1.5" ;
-}
+  scale: "1" | "1.05" | "1.10" | "1.25" | "1.5";
+};
 
 export type Text = {
   label: string;
@@ -37,7 +37,7 @@ const SCALE = {
   "1.05": "scale-105",
   "1.10": "scale-110",
   "1.25": "scale-125",
-  "1.5": "scale-150"
+  "1.5": "scale-150",
 };
 
 const BOLDS = {
@@ -117,7 +117,7 @@ export default function BannnerGrid({ text, image, texts }: Props) {
                 <Source
                   media="(max-width: 767px)"
                   fetchPriority={"auto"}
-                  src={image.mobile ? (image.mobile):(image.desktop)}
+                  src={image.mobile ? (image.mobile) : (image.desktop)}
                   width={360}
                   height={400}
                 />
@@ -136,8 +136,7 @@ export default function BannnerGrid({ text, image, texts }: Props) {
                   alt={image.altImage}
                 />
               </Picture>
-            ) 
-         }
+            )}
         </div>
       </section>
     </div>

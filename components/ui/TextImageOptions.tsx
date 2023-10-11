@@ -27,8 +27,8 @@ export type Img = {
   desktop: LiveImage;
   mobile?: LiveImage;
   altImage?: string;
-  scale: "1"| "1.05" | "1.10"  | "1.25"  | "1.5" ;
-}
+  scale: "1" | "1.05" | "1.10" | "1.25" | "1.5";
+};
 
 const BOLDS = {
   "extralight": "font-extralight",
@@ -57,8 +57,8 @@ const SCALE = {
   "1.05": "scale-105",
   "1.10": "scale-110",
   "1.25": "scale-125",
-  "1.5": "scale-150"
-}; 
+  "1.5": "scale-150",
+};
 
 const COLOR = {
   "black": "text-black",
@@ -111,13 +111,13 @@ export default function BannnerGrid({
         <div
           class={`flex justify-center items-end w-1/2`}
         >
-           {image &&
+          {image &&
             (
               <Picture preload={false}>
                 <Source
                   media="(max-width: 767px)"
                   fetchPriority={"auto"}
-                  src={image.mobile ? (image.mobile):(image.desktop)}
+                  src={image.mobile ? (image.mobile) : (image.desktop)}
                   width={360}
                   height={400}
                 />
@@ -133,12 +133,10 @@ export default function BannnerGrid({
                   class={`w-full ${SCALE[image.scale]}`}
                   loading={"lazy"}
                   src={image.desktop}
-                  alt={image.altImage}  
-
+                  alt={image.altImage}
                 />
               </Picture>
-            ) 
-         }
+            )}
         </div>
       </section>
     </div>
