@@ -15,12 +15,11 @@ export interface Banner {
   alt: string;
   /** @description when user clicks on the image, go to this link */
   href: string;
- 
 }
 
 export interface Props {
   /** @description Title section */
-  title?: string ;
+  title?: string;
   titleHighlight?: string;
 
   images: Banner[];
@@ -35,14 +34,13 @@ export interface Props {
   interval?: number;
 }
 
-function BannerItem({ image, lcp,  }: { image: Banner; lcp?: boolean }) {
+function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
   const {
     alt,
     mobile,
     desktop,
     href,
   } = image;
-
 
   return (
     <a
@@ -76,7 +74,7 @@ function BannerItem({ image, lcp,  }: { image: Banner; lcp?: boolean }) {
   );
 }
 
-function Dots({ images, interval = 3, }: Props) {
+function Dots({ images, interval = 3 }: Props) {
   return (
     <>
       <style
@@ -109,67 +107,68 @@ function Dots({ images, interval = 3, }: Props) {
 }
 
 function Buttons() {
-    const arrow = "/arrowup.svg";
+  const arrow = "/arrowup.svg";
 
   return (
     <>
       <div class="flex items-center justify-center z-10 col-start-1 row-start-2">
         <Slider.PrevButton class="btn btn-circle bg-transparent">
-        <img
-              src={arrow}
-              width={50}
-              height={55}
-              class="shrink-0 w-auto  my-10 -rotate-90"
-              alt={"arrow "}
-              loading={"lazy"}
-            />
+          <img
+            src={arrow}
+            width={50}
+            height={55}
+            class="shrink-0 w-auto  my-10 -rotate-90"
+            alt={"arrow "}
+            loading={"lazy"}
+          />
         </Slider.PrevButton>
       </div>
       <div class="flex items-center justify-center z-10 col-start-3 row-start-2">
         <Slider.NextButton class="btn btn-circle bg-transparent">
-        <img
-              src={arrow}
-              width={50}
-              height={55}
-              class="shrink-0 w-auto  my-10 rotate-90"
-              alt={"arrow "}
-              loading={"lazy"}
-            />
+          <img
+            src={arrow}
+            width={50}
+            height={55}
+            class="shrink-0 w-auto  my-10 rotate-90"
+            alt={"arrow "}
+            loading={"lazy"}
+          />
         </Slider.NextButton>
       </div>
     </>
   );
 }
 
-function BannerCarousel({ images, preload, interval,title,titleHighlight }: Props) {
+function BannerCarousel(
+  { images, preload, interval, title, titleHighlight }: Props,
+) {
   const id = useId();
 
   return (
     <>
-     
-    <div class="text-5xl flex flex-row justify-center items-center w-full px-[100px] pt-[65px] bg-[#1E2D32]">
-        <span class="font-medium  text-5xl text-white mr-4">{title }</span> 
-        <span class="font-bold text-transparent bg-clip-text bg-gradient-to-t  text-5xl from-[#9990FF]  to-[#76DBD3]">{titleHighlight}</span>
-    </div> 
+      <div class="text-5xl flex flex-row justify-center items-center w-full px-[100px] pt-[65px] bg-[#1E2D32]">
+        <span class="font-medium  text-5xl text-white mr-4">{title}</span>
+        <span class="font-bold text-transparent bg-clip-text bg-gradient-to-t  text-5xl from-[#9990FF]  to-[#76DBD3]">
+          {titleHighlight}
+        </span>
+      </div>
 
-    <div
-      id={id}
-      class="grid grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px] pb-[65px] bg-[#1E2D32] px-[100px]"
-    >
-     
-      <Slider class="carousel carousel-center w-full col-span-full row-span-full scrollbar-none gap-6">
-        {images?.map((image, index) => (
-          <Slider.Item index={index} class="carousel-item w-full">
-            <BannerItem image={image} lcp={index === 0 && preload}  />
-          </Slider.Item>
-        ))}
-      </Slider>
+      <div
+        id={id}
+        class="grid grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px] pb-[65px] bg-[#1E2D32] px-[100px]"
+      >
+        <Slider class="carousel carousel-center w-full col-span-full row-span-full scrollbar-none gap-6">
+          {images?.map((image, index) => (
+            <Slider.Item index={index} class="carousel-item w-full">
+              <BannerItem image={image} lcp={index === 0 && preload} />
+            </Slider.Item>
+          ))}
+        </Slider>
 
-      {images!.length > 1 ? (<Buttons />):("")} 
+        {images!.length > 1 ? <Buttons /> : ("")}
 
-      <SliderJS rootId={id} interval={interval && interval * 1e3} infinite />
-
-    </div>
+        <SliderJS rootId={id} interval={interval && interval * 1e3} infinite />
+      </div>
     </>
   );
 }
