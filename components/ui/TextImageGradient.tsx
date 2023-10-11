@@ -12,22 +12,29 @@ export interface Props {
 }
 export type Text = {
   label: string;
-  size: 48 | 40 | 36 | 30 | 24 | 20 | 18 | 16 | 14 | 12 ;
-  bold: "extralight"| "light"| "medium" | "normal"|"semibold"|"bold"|"font-extrabold";
+  size: 48 | 40 | 36 | 30 | 24 | 20 | 18 | 16 | 14 | 12;
+  bold:
+    | "extralight"
+    | "light"
+    | "medium"
+    | "normal"
+    | "semibold"
+    | "bold"
+    | "font-extrabold";
   italic: boolean;
-  color: "black" | "white" | "green"| "dark green" | "gradient";
+  color: "black" | "white" | "green" | "dark green" | "gradient";
   uppercase: boolean;
   lineBreak: boolean;
 };
 
 const BOLDS = {
-  "extralight"      :"font-extralight",
-  "light"           :"font-light",
-  "medium"          :"font-medium",
-  "normal"          :"font-normal",
-  "semibold"        :"font-semibold",
-  "bold"            :"font-bold",
-  "font-extrabold"  :"font-extrabold",
+  "extralight": "font-extralight",
+  "light": "font-light",
+  "medium": "font-medium",
+  "normal": "font-normal",
+  "semibold": "font-semibold",
+  "bold": "font-bold",
+  "font-extrabold": "font-extrabold",
 };
 const SIZE = {
   48: "text-5xl",
