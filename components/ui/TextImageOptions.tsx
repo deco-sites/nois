@@ -86,7 +86,7 @@ export default function BannnerGrid({
                 ${text.uppercase && "uppercase"}
                 ${SIZE[text.size]}`}
                 >
-                  {text.label + " "}
+                  {text.label + "  "}
                   {text.lineBreak && <br />}
                 </span>
               ))}
