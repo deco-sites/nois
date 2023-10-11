@@ -5,11 +5,17 @@ import Image from "deco-sites/std/components/Image.tsx";
 // Checar altura, e sopreposição da image
 
 export interface Props {
-  image?: LiveImage;
-  altImage?: string;
+  image?: Img;
   texts?: Text[];
   text?: Text;
 }
+export type Img = {
+  desktop: LiveImage;
+  mobile?: LiveImage;
+  altImage?: string;
+  scale: "1"| "1.05" | "1.10"  | "1.25"  | "1.5" ;
+}
+
 export type Text = {
   label: string;
   size: 48 | 40 | 36 | 30 | 24 | 20 | 18 | 16 | 14 | 12;
@@ -25,6 +31,13 @@ export type Text = {
   color: "black" | "white" | "green" | "dark green" | "gradient";
   uppercase: boolean;
   lineBreak: boolean;
+};
+const SCALE = {
+  "1": "scale-100",
+  "1.05": "scale-105",
+  "1.10": "scale-110",
+  "1.25": "scale-125",
+  "1.5": "scale-150"
 };
 
 const BOLDS = {
@@ -58,9 +71,9 @@ const COLOR = {
     "text-transparent  bg-clip-text bg-gradient-to-t from-[#9990FF] to-[#76DBD3]",
 };
 
-export default function BannnerGrid({ text, altImage, image, texts }: Props) {
+export default function BannnerGrid({ text, image, texts }: Props) {
   return (
-    <div class="w-full  bg-[#1E2D32] py-[70px]  ">
+    <div class="w-full  bg-[#1E2D32] py-[100px]  ">
       <section class="flex flex-row justify-between items-center w-full  bg-gradient-to-b from-[#9990FF]  to-[#76DBD3]  px-[100px] rounded-b-[50px] ">
         <div class=" flex flex-col justify-center items-start gap-2 max-w-[540px] ">
           <div class="flex  flex-col text-left  mb-[40px]">
@@ -100,17 +113,31 @@ export default function BannnerGrid({ text, altImage, image, texts }: Props) {
         >
           {image &&
             (
-              <Image
-                class="w-full object-cover scale-110"
-                src={image}
-                alt={altImage}
-                width={1900}
-                height={1840}
-                loading="lazy"
-                sizes="(max-width: 640px) "
-                decoding="async"
-              />
-            )}
+              <Picture preload={false}>
+                <Source
+                  media="(max-width: 767px)"
+                  fetchPriority={"auto"}
+                  src={image.mobile ? (image.mobile):(image.desktop)}
+                  width={360}
+                  height={400}
+                />
+                <Source
+                  media="(min-width: 768px)"
+                  fetchPriority={"auto"}
+                  src={image.desktop}
+                  width={1900}
+                  height={1840}
+                />
+
+                <img
+                  class={`w-full ${SCALE[image.scale]}`}
+                  loading={"lazy"}
+                  src={image.desktop}
+                  alt={image.altImage}
+                />
+              </Picture>
+            ) 
+         }
         </div>
       </section>
     </div>
