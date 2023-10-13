@@ -4,22 +4,22 @@ import Image from "deco-sites/std/components/Image.tsx";
 import Icon, { AvailableIcons } from "$store/components/ui/Icon.tsx";
 
 export interface Props {
-  href : string;
-  
-  
+  href: string;
 }
 
-export default function BannnerGrid({href
-}: Props) {
+export default function BannnerGrid({ href }: Props) {
   const icon = "/paper-plane-outline.svg";
 
   return (
     <div class="w-full bg-[#1E2D32] py-[40px] px-[100px]  ">
-      <section href={href} class="flex items-start w-full h-[300px] bg-gradient-to-t from-[#9990FF]  to-[#76DBD3] py-[60px]  px-[50px] rounded-[50px] ">
+      <section
+        href={href}
+        class="flex items-start w-full h-[300px] bg-gradient-to-t from-[#9990FF]  to-[#76DBD3] py-[60px]  px-[50px] rounded-[50px] "
+      >
         <div class=" flex flex-col  w-full h-full justify-between ">
           <div class="flex  flex-row  w-full justify-between text-left  mb-5">
-             <a  href={href}>
-              <div class="flex flex-col text-base text-left w-full" >
+            <a href={href}>
+              <div class="flex flex-col text-base text-left w-full">
                 <span class="text-black  ">
                   Tem
                 </span>
@@ -30,10 +30,10 @@ export default function BannnerGrid({href
             </a>
 
             <a
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="PaperPlane icon"
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="PaperPlane icon"
             >
               <img
                 src={icon}
@@ -44,10 +44,8 @@ export default function BannnerGrid({href
             </a>
           </div>
 
-       
-     
           <div class="flex text-left text-5xl w-full leading-10">
-            <a  href={href}>
+            <a href={href}>
               <span class="font-bold">
                 Contate-
               </span>
