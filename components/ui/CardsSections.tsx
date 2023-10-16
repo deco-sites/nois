@@ -118,9 +118,9 @@ function CardsCamps(
 ) {
   return (
     <>
-      <div class="w-full  flex flex-col  px-[200px] justify-center items-center  bg-[#1E2D32]">
+      <div class="w-full  flex flex-col  px-[200px] justify-center items-center py-20  bg-[#1E2D32]">
         <div
-          class={`w-full flex fle-row text-white justify-center items-center text-center text-5xl gap-2`}
+          class={`w-full flex fle-row my-10 text-white justify-center items-center text-center text-5xl gap-2`}
         >
           <span>Nossos</span>
           <span class={`text-[#9990ff]`}>Clientes</span> <span>e</span>{" "}
