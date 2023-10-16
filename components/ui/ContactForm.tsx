@@ -40,7 +40,6 @@ function BannerItem(
   } = images;
   const logo = "/IconLogo.png";
 
-
   const [mensagem, setMensagem] = useState("");
 
   const [nome, setNome] = useState("Nome");
@@ -50,7 +49,7 @@ function BannerItem(
   const [telefone, setRelefone] = useState("Telefone");
   const [emial, setEmail] = useState("E-mail");
 
-  console.log(mensagem)
+  console.log(mensagem);
   return (
     <div class="relative overflow-y-hidden w-full h-full">
       <Picture preload={preload}>
@@ -143,7 +142,6 @@ function BannerItem(
                   id="Mensagem-1"
                   class="py-3 ps-5 pe-4 block w-full h-full rounded-md bg-transparent border text-sm border-[#76DBD3]  text-[#76DBD3] placeholder:text-[#76dbd3]   focus:outline-none "
                   placeholder="Mensagem..."
-                
                 >
                 </textarea>
               </div>
