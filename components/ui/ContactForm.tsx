@@ -4,6 +4,9 @@ import Slider from "$store/components/ui/Slider.tsx";
 import SliderJS from "$store/islands/SliderJS.tsx";
 import { Picture, Source } from "deco-sites/std/components/Picture.tsx";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
+import { useState } from "preact/hooks";
+import { RefObject, useEffect, useRef } from "preact/compat";
+
 /**
  * @titleBy alt
  */
@@ -37,6 +40,17 @@ function BannerItem(
   } = images;
   const logo = "/IconLogo.png";
 
+
+  const [mensagem, setMensagem] = useState("");
+
+  const [nome, setNome] = useState("Nome");
+
+  const [sobreNome, setSobrenome] = useState("Sobre nome");
+
+  const [telefone, setRelefone] = useState("Telefone");
+  const [emial, setEmail] = useState("E-mail");
+
+  console.log(mensagem)
   return (
     <div class="relative overflow-y-hidden w-full h-full">
       <Picture preload={preload}>
@@ -129,6 +143,7 @@ function BannerItem(
                   id="Mensagem-1"
                   class="py-3 ps-5 pe-4 block w-full h-full rounded-md bg-transparent border text-sm border-[#76DBD3]  text-[#76DBD3] placeholder:text-[#76dbd3]   focus:outline-none "
                   placeholder="Mensagem..."
+                
                 >
                 </textarea>
               </div>
@@ -136,14 +151,14 @@ function BannerItem(
 
             <div class="grid">
               <a
-                href={`https://wa.me/${numberWhats}?text=`}
+                href={`https://wa.me/${numberWhats}`}
                 target="_blank"
                 type="submit"
                 class="flex flex-row justify-center items-center py-3 ps-5 pe-4  w-full h-full rounded-md bg-transparent border text-sm border-[#76DBD3]  text-[#76DBD3] placeholder:text-[#76dbd3] "
               >
                 Enviar
                 <svg
-                  class="w-3 h-3 mx-2"
+                  class="w-3 h-3 ml-2"
                   width="16"
                   height="16"
                   viewBox="0 0 16 16"
