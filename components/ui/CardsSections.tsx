@@ -37,7 +37,7 @@ const RADIUS_MOBILE = {
   "xl": "rounded-xl",
   "2xl": "rounded-2xl",
   "3xl": "rounded-3xl",
-  "4xl": "rounded-[50px]",
+  "4xl": "rounded-[40px]",
   "full": "rounded-full",
 };
 
@@ -49,7 +49,7 @@ const RADIUS_DESKTOP = {
   "xl": "sm:rounded-xl",
   "2xl": "sm:rounded-2xl",
   "3xl": "sm:rounded-3xl",
-  "4xl": "sm:rounded-[50px]",
+  "4xl": "sm:rounded-[40px]",
   "full": "sm:rounded-full",
 };
 
