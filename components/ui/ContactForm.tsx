@@ -24,11 +24,11 @@ export interface Props {
   preload?: boolean;
 
   /** @description Ex: 5511222225555 */
-  numberWhats?: number
+  numberWhats?: number;
 }
 
 function BannerItem(
-  { images, numberWhats,preload  }:Props,
+  { images, numberWhats, preload }: Props,
 ) {
   const {
     desktop,
@@ -37,11 +37,8 @@ function BannerItem(
   } = images;
   const logo = "/IconLogo.png";
 
-  
   return (
-    <div
-      class="relative overflow-y-hidden w-full h-full"
-    >
+    <div class="relative overflow-y-hidden w-full h-full">
       <Picture preload={preload}>
         <Source
           media="(max-width: 767px)"
@@ -67,8 +64,7 @@ function BannerItem(
       </Picture>
 
       <div class="absolute top-[100px] bottom-0 left-0 right-0  flex flex-col justify-center items-center w-full gap-8   text-[#76DBD3] ">
-        
-        <form >
+        <form>
           <div class="flex flex-row flex-wrap justify-evenly gap-8 w-[500px]  mt-8 ">
             <div class={`w-[230px]`}>
               <label for="name-1" class="sr-only">
@@ -79,14 +75,12 @@ function BannerItem(
                   type="text"
                   id="name-1"
                   class="py-3 ps-5 pe-4 block w-full rounded-md bg-transparent border text-sm border-[#76DBD3]  text-[#76DBD3] placeholder:text-[#76dbd3]  focus:outline-none "
-                  placeholder="Nome"  
-                  
-                  />
-              
+                  placeholder="Nome"
+                />
               </div>
             </div>
 
-            <div  class={`w-[230px]`}>
+            <div class={`w-[230px]`}>
               <label for="Sobre-1" class="sr-only">
                 Sobre nome
               </label>
@@ -97,10 +91,9 @@ function BannerItem(
                   class="py-3 ps-5 pe-4 block w-full rounded-md bg-transparent border text-sm border-[#76DBD3]  text-[#76DBD3] placeholder:text-[#76dbd3]  focus:outline-none   "
                   placeholder="Sobre nome"
                 />
-              
               </div>
             </div>
-            <div  class={`w-[230px]`}>
+            <div class={`w-[230px]`}>
               <label for="E-mail-1" class="sr-only">
                 E-mail
               </label>
@@ -108,14 +101,13 @@ function BannerItem(
                 <input
                   type="text"
                   id="E-mail-1"
-                  class="py-3 ps-5 pe-4 block w-full rounded-md bg-transparent border text-sm border-[#76DBD3]  text-[#76DBD3] placeholder:text-[#76dbd3]   focus:outline-none  " 
+                  class="py-3 ps-5 pe-4 block w-full rounded-md bg-transparent border text-sm border-[#76DBD3]  text-[#76DBD3] placeholder:text-[#76dbd3]   focus:outline-none  "
                   placeholder="E-mail"
                 />
-              
               </div>
             </div>
 
-            <div  class={`w-[230px]`}>
+            <div class={`w-[230px]`}>
               <label for="Telefone-1" class="sr-only">
                 Telefone
               </label>
@@ -126,18 +118,18 @@ function BannerItem(
                   class="py-3 ps-5 pe-4 block w-full rounded-md bg-transparent border text-sm border-[#76DBD3]  text-[#76DBD3] placeholder:text-[#76dbd3]  focus:outline-none "
                   placeholder="Telefone"
                 />
-              
               </div>
             </div>
-            <div  class={`w-full h-[200px]`}>
+            <div class={`w-full h-[200px]`}>
               <label for="Mensagem-1" class="sr-only">
                 Mensagem...
               </label>
               <div class="flex justify-start items-start  w-full h-[200px] ">
-                <textarea  
+                <textarea
                   id="Mensagem-1"
                   class="py-3 ps-5 pe-4 block w-full h-full rounded-md bg-transparent border text-sm border-[#76DBD3]  text-[#76DBD3] placeholder:text-[#76dbd3]   focus:outline-none "
-                  placeholder="Mensagem...">
+                  placeholder="Mensagem..."
+                >
                 </textarea>
               </div>
             </div>
@@ -148,7 +140,7 @@ function BannerItem(
                 target="_blank"
                 type="submit"
                 class="flex flex-row justify-center items-center py-3 ps-5 pe-4  w-full h-full rounded-md bg-transparent border text-sm border-[#76DBD3]  text-[#76DBD3] placeholder:text-[#76dbd3] "
-                >
+              >
                 Enviar
                 <svg
                   class="w-3 h-3 mx-2"
