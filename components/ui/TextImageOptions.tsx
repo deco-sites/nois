@@ -128,31 +128,32 @@ export default function BannnerGrid({
           </div>
 
           {text &&
-            (<>
-              <div class="hidden lg:flex text-center lg:text-left w-full">
-                <span
-                  class={`  ${BOLDS[text.bold]}
+            (
+              <>
+                <div class="hidden lg:flex text-center lg:text-left w-full">
+                  <span
+                    class={`  ${BOLDS[text.bold]}
                 ${COLOR[text.color]}
                 ${text.italic && "italic"}
                 ${text.uppercase && "uppercase"}
                 ${SIZE[text.size]}
             `}
-                >
-                  {text.label}
-                </span>
-              </div>
-               <div class=" flex lg:hidden text-center lg:text-left w-full">
-               <span
-                 class={`  ${BOLDS[text.bold]}
+                  >
+                    {text.label}
+                  </span>
+                </div>
+                <div class=" flex lg:hidden text-center lg:text-left w-full">
+                  <span
+                    class={`  ${BOLDS[text.bold]}
                ${COLOR[text.color]}
                ${text.italic && "italic"}
                ${text.uppercase && "uppercase"}
                ${SIZEMOBILE[text.sizeMobile]}`}
-               >
-                 {text.label}
-               </span>
-             </div>
-             </>
+                  >
+                    {text.label}
+                  </span>
+                </div>
+              </>
             )}
         </div>
 

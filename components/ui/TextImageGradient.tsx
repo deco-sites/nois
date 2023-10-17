@@ -81,7 +81,8 @@ const COLOR = {
   "white": "text-white",
   "green": " text-[#76DBD3]",
   "darkGreen": "text-[#1E2D32]",
-  "gradient": "text-transparent  bg-clip-text bg-gradient-to-t from-[#9990FF] to-[#76DBD3]",
+  "gradient":
+    "text-transparent  bg-clip-text bg-gradient-to-t from-[#9990FF] to-[#76DBD3]",
 };
 
 export default function BannnerGrid({ text, image, texts }: Props) {
@@ -123,32 +124,33 @@ export default function BannnerGrid({ text, image, texts }: Props) {
           </div>
 
           {text &&
-            (<>
-              <div class="hidden lg:flex text-center lg:text-left mb-5 w-full">
-                <span
-                  class={`  ${BOLDS[text.bold]}
+            (
+              <>
+                <div class="hidden lg:flex text-center lg:text-left mb-5 w-full">
+                  <span
+                    class={`  ${BOLDS[text.bold]}
                 ${COLOR[text.color]}
                 ${text.italic && "italic"}+
                 ${text.uppercase && "uppercase"}
                 ${SIZE[text.size]}
             `}
-                >
-                  {text.label}
-                </span>
-              </div>
+                  >
+                    {text.label}
+                  </span>
+                </div>
 
-               <div class=" flex lg:hidden text-center lg:text-left mb-5 w-full">
-               <span
-                 class={`  ${BOLDS[text.bold]}
+                <div class=" flex lg:hidden text-center lg:text-left mb-5 w-full">
+                  <span
+                    class={`  ${BOLDS[text.bold]}
                ${COLOR[text.color]}
                ${text.italic && "italic"}
                ${text.uppercase && "uppercase"}
                ${SIZEMOBILE[text.sizeMobile]}`}
-               >
-                 {text.label}
-               </span>
-             </div>
-             </>
+                  >
+                    {text.label}
+                  </span>
+                </div>
+              </>
             )}
         </div>
         <div
