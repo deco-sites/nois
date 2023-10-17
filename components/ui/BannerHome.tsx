@@ -45,7 +45,7 @@ function Buttons({ saibaMaisLink }: { saibaMaisLink: string }) {
   return (
     <a
       href={saibaMaisLink}
-      class="flex cursor-pointer items-center justify-center z-10 col-start-1 row-start-2 border-2 text-[20px] px-[25px] py-[10px] mb-8 rounded-full border-[#76bdd3]"
+      class="flex cursor-pointer items-center justify-center z-10 col-start-1 row-start-2 border-2 text-base lg:text-[20px] px-[25px] py-[10px] mb-8 rounded-full border-[#76bdd3]"
     >
       Saiba mais
     </a>
@@ -75,8 +75,8 @@ function BannerItem(
           media="(max-width: 767px)"
           fetchPriority={lcp ? "high" : "auto"}
           src={mobile}
-          width={360}
-          height={600}
+          width={390}
+          height={845}
         />
         <Source
           media="(min-width: 768px)"
@@ -96,16 +96,16 @@ function BannerItem(
 
       <div class="absolute top-[100px] bottom-0 m-auto left-0 right-0  flex flex-col justify-center items-center w-full gap-8   text-[#76DBD3] ">
         <div class=" flex flex-col justify-center items-center w-full gap-8 mb-10  text-[#76DBD3]">
-          <span class="text-6xl font-medium text-base-100">
+          <span class="text-4xl lg:text-6xl font-medium text-base-100">
             {action!.title}
           </span>
-          <span class="text-6xl  font-semibold text-base-100">
+          <span class="text-4xl lg:text-6xl  font-semibold text-base-100">
             {action!.title2}
           </span>
-          <span class="font-extrabold text-5xl  text-base-100">
+          <span class="text-4xl font-extrabold lg:text-5xl  text-base-100">
             {action!.subTitle}
           </span>
-          <span class=" text-xl text-white text-center text-base-100 max-w-[294px] ">
+          <span class="text-base lg:text-xl text-white text-center text-base-100 max-w-[294px] ">
             {action!.text}
           </span>
         </div>
