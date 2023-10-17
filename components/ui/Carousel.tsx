@@ -146,7 +146,7 @@ function BannerCarousel(
 
   return (
     <>
-      <div class="text-5xl flex flex-row justify-center items-center w-full px-[100px] pt-[65px] bg-[#1E2D32]">
+      <div class="text-5xl flex flex-row justify-center items-center w-full px-[30px] lg:px-[100px] pt-[65px] bg-[#1E2D32]">
         <span class="font-medium  text-5xl text-white mr-4">{title}</span>
         <span class="font-bold text-transparent bg-clip-text bg-gradient-to-t  text-5xl from-[#9990FF]  to-[#76DBD3]">
           {titleHighlight}
@@ -155,7 +155,7 @@ function BannerCarousel(
 
       <div
         id={id}
-        class="grid grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px] pb-[65px] bg-[#1E2D32] px-[100px]"
+        class="grid grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px] pb-[65px] bg-[#1E2D32] px-[30px] lg:px-[100px]"
       >
         <Slider class="carousel carousel-center w-full col-span-full row-span-full scrollbar-none gap-6">
           {images?.map((image, index) => (

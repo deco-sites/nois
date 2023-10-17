@@ -55,7 +55,7 @@ function Footer(
 
   return (
     <>
-      <footer class="relative w-full flex flex-col bg-[#1E2D32]  text-[#76DBD3] px-[100px]  pt-20">
+      <footer class="relative w-full flex flex-col bg-[#1E2D32]  text-[#76DBD3] px-[30px] lg:px-[100px]  pt-20">
         <div class=" w-full flex flex-col border-b border-[#76DBD3] z-10">
           <FooterContainer class="">
             {/* Desktop view */}
