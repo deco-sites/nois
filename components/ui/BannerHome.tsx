@@ -95,7 +95,7 @@ function BannerItem(
       </Picture>
 
       <div class="absolute top-[100px] bottom-0 m-auto left-0 right-0  flex flex-col justify-center items-center w-full gap-8   text-[#76DBD3] ">
-        <div class=" flex flex-col justify-center items-center w-full gap-8 mb-10  text-[#76DBD3]">
+        <div class=" flex flex-col justify-center items-center w-full gap-5 mb-8  text-[#76DBD3]">
           <span class="text-4xl lg:text-6xl font-medium text-base-100">
             {action!.title}
           </span>
@@ -116,7 +116,7 @@ function BannerItem(
           src={logo}
           width={60}
           height={65}
-          class="shrink-0 w-auto mt-8 "
+          class="shrink-0 w-auto mt-4 "
           alt={"Icon nois"}
           loading={"lazy"}
         />
