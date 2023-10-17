@@ -16,7 +16,7 @@ function Alert({ alerts = [], interval = 5 }: Props) {
 
   return (
     <div id={id}>
-      <Slider class="hidden lg:flex w-full justify-center items-center bg-[#76DBD3] font-semibold scrollbar-none">
+      <Slider class="hidden lg:flex w-full justify-center items-center  bg-[#76DBD3] font-semibold scrollbar-none">
         {alerts.map((alert, index) => (
           <Slider.Item index={index} class="carousel-item">
             <span class="text-sm text-secondary-content flex justify-center items-center w-full h-[40px]">

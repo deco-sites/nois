@@ -105,7 +105,7 @@ function BannerItem(
           <span class="text-4xl font-extrabold lg:text-5xl  text-base-100">
             {action!.subTitle}
           </span>
-          <span class="text-base lg:text-xl text-white text-center text-base-100 max-w-[294px] ">
+          <span class="text-base lg:text-xl text-white text-center text-base-100 max-w-[200px] lg:max-w-[294px] ">
             {action!.text}
           </span>
         </div>
