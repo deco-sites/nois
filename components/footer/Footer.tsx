@@ -55,12 +55,12 @@ function Footer(
 
   return (
     <>
-      <footer class="relative w-full flex flex-col bg-[#1E2D32]  text-[#76DBD3] px-[100px]  pt-20">
+      <footer class="relative w-full flex flex-col bg-[#1E2D32]  text-[#76DBD3] px-[30px] lg:px-[100px]  pt-20">
         <div class=" w-full flex flex-col border-b border-[#76DBD3] z-10">
           <FooterContainer class="">
             {/* Desktop view */}
 
-            <div class="flex flex-col text-xl">
+            <div class="flex flex-col text-xs lg:text-xl">
               <span>
                 Tem dúvidas ou precisa de mais informações?
               </span>
@@ -72,12 +72,20 @@ function Footer(
               src={icon}
               width={50}
               height={55}
-              class="shrink-0 w-auto  my-10"
+              class="hidden lg:flex shrink-0 w-auto  my-10"
+              alt={"Icon nois"}
+              loading={"lazy"}
+            />
+            <img
+              src={icon}
+              width={35}
+              height={40}
+              class="flex lg:hidden shrink-0 w-auto  my-10"
               alt={"Icon nois"}
               loading={"lazy"}
             />
 
-            <ul class="flex flex-col mb-10 text-xl">
+            <ul class="flex flex-col mb-5 lg:mb-10 text-xs lg:text-xl">
               {sections.map((section) => (
                 <li>
                   <a
@@ -90,15 +98,27 @@ function Footer(
               ))}
             </ul>
 
-            <div class=" flex flex-row justify-between w-full items-end gap-6 text-xl shrink-0">
+            <div class=" flex flex-row justify-between w-full items-end gap-6 text-xs lg:text-xl shrink-0">
               <div class="flex flex-row items-end gap-10">
-                <a href="/" aria-label="Page logo" class="block w-[120px]  ">
+                <a
+                  href="/"
+                  aria-label="Page logo"
+                  class="block w-[80px] lg:w-[120px]  "
+                >
                   <img
                     src={logo}
                     width={120}
                     height={50}
-                    class="shrink-0 w-auto "
+                    class="hidden lg:flex shrink-0 w-auto  "
                     alt={"Logo nois"}
+                    loading={"lazy"}
+                  />
+                  <img
+                    src={logo}
+                    width={80}
+                    height={35}
+                    class="flex lg:hidden shrink-0 w-auto "
+                    alt={"Icon nois"}
                     loading={"lazy"}
                   />
                 </a>
@@ -115,7 +135,15 @@ function Footer(
                   src={arrow}
                   width={50}
                   height={50}
-                  class="shrink-0 w-auto "
+                  class="hidden lg:flex shrink-0 w-auto"
+                  alt={"arrow up"}
+                  loading={"lazy"}
+                />
+                <img
+                  src={arrow}
+                  width={30}
+                  height={30}
+                  class="flex lg:hidden shrink-0 "
                   alt={"arrow up"}
                   loading={"lazy"}
                 />
@@ -126,16 +154,16 @@ function Footer(
 
         <div class="w-full ">
           <FooterContainer class="flex flex-row justify-between w-full">
-            <div class="flex flex-row gap-10">
-              <span class="text-base">
+            <div class="flex flex-row items-end text-end gap-10">
+              <span class="text-xs lg:text-base">
                 Cookie setting
               </span>
 
-              <span class="text-base">
+              <span class="text-xs lg:text-base">
                 © 2023 nois Labs, Inc.
               </span>
             </div>
-            <div class="flex flex-row object-center justify-start text-end gap-5">
+            <div class="flex flex-row object-center justify-start items-end text-end gap-5">
               <a
                 href={Href_Instagram}
                 target="_blank"

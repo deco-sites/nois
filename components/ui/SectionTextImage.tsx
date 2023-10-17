@@ -18,7 +18,7 @@ export default function BannnerGrid({
   text,
 }: Props) {
   return (
-    <div class="w-full bg-[#1E2D32] px-[100px] py-[100px]">
+    <div class="w-full bg-[#1E2D32] px-[30px] lg:px-[100px] py-[100px]">
       <section class="flex flex-row justify-between items-center w-full mx-auto min-h-[640px]">
         <div class=" flex flex-col justify-center items-start gap-2 max-w-[690px] ">
           <div class="flex  flex-col text-left text-5xl mb-[40px]">
