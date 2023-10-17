@@ -91,11 +91,10 @@ export default function BannnerGrid({
       <section class="flex flex-col lg:flex-row justify-center lg:justify-between items-center w-full mx-auto h-full px-[30px] lg:px-[100px]">
         <div class=" flex flex-col justify-center items-start gap-2 max-w-[540px] mb-5 ">
           <div class="hidden lg:flex  flex-col text-center lg:text-left mb-2 lg:mb-10">
-            
             <span class=" ">
               {texts && texts.map((text) => (
                 <span
-                class={`
+                  class={`
                 ${BOLDS[text.bold]}
                 ${COLOR[text.color]}
                 ${text.italic && "italic"}
@@ -108,15 +107,12 @@ export default function BannnerGrid({
                 </span>
               ))}
             </span>
-
-           
           </div>
           <div class="flex lg:hidden  flex-col text-center lg:text-left mb-2 lg:mb-10">
-            
             <span class=" ">
               {texts && texts.map((text) => (
                 <span
-                class={`
+                  class={`
                 ${BOLDS[text.bold]}
                 ${COLOR[text.color]}
                 ${text.italic && "italic"}
@@ -129,24 +125,34 @@ export default function BannnerGrid({
                 </span>
               ))}
             </span>
-
-           
           </div>
 
           {text &&
-            (
-              <div class=" flex text-center lg:text-left w-full">
+            (<>
+              <div class="hidden lg:flex text-center lg:text-left w-full">
                 <span
                   class={`  ${BOLDS[text.bold]}
                 ${COLOR[text.color]}
                 ${text.italic && "italic"}
                 ${text.uppercase && "uppercase"}
                 ${SIZE[text.size]}
-                ${SIZEMOBILE[text.sizeMobile]}`}
+            `}
                 >
                   {text.label}
                 </span>
               </div>
+               <div class=" flex lg:hidden text-center lg:text-left w-full">
+               <span
+                 class={`  ${BOLDS[text.bold]}
+               ${COLOR[text.color]}
+               ${text.italic && "italic"}
+               ${text.uppercase && "uppercase"}
+               ${SIZEMOBILE[text.sizeMobile]}`}
+               >
+                 {text.label}
+               </span>
+             </div>
+             </>
             )}
         </div>
 
