@@ -42,28 +42,28 @@ const BOLDS = {
   "font-extrabold": "font-extrabold",
 };
 const SIZE = {
-  48: " lg:text-5xl",
-  40: " lg:text-[40px]",
-  36: " lg:text-4xl",
-  30: " lg:text-3xl",
-  24: " lg:text-2xl",
-  20: " lg:text-xl",
-  18: " lg:text-lg",
-  16: " lg:text-base",
-  14: " lg:text-sm",
-  12: " lg:text-xs",
+  48: "lg:text-5xl",
+  40: "lg:text-[40px]",
+  36: "lg:text-4xl",
+  30: "lg:text-3xl",
+  24: "lg:text-2xl",
+  20: "lg:text-xl",
+  18: "lg:text-lg",
+  16: "lg:text-base",
+  14: "lg:text-sm",
+  12: "lg:text-xs",
 };
 const SIZEMOBILE = {
-  48: " text-5xl",
-  40: " text-[40px]",
-  36: " text-4xl",
-  30: " text-3xl",
-  24: " text-2xl",
-  20: " text-xl",
-  18: " text-lg",
-  16: " text-base",
-  14: " text-sm",
-  12: " text-xs",
+  48: "text-5xl",
+  40: "text-[40px]",
+  36: "text-4xl",
+  30: "text-3xl",
+  24: "text-2xl",
+  20: "text-xl",
+  18: "text-lg",
+  16: "text-base",
+  14: "text-sm",
+  12: "text-xs",
 };
 
 const SCALE = {
@@ -89,16 +89,39 @@ export default function BannnerGrid({
   return (
     <div class="w-full bg-[#1E2D32]  py-[100px] ">
       <section class="flex flex-col lg:flex-row justify-center lg:justify-between items-center w-full mx-auto h-full px-[30px] lg:px-[100px]">
-        <div class=" flex flex-col justify-center items-start gap-2 max-w-[540px] mb-5">
-          <div class="flex  flex-col text-center lg:text-left  mb-2 lg:mb-10">
+        <div class=" flex flex-col justify-center items-start gap-2 max-w-[540px] mb-5 ">
+          <div class="hidden lg:flex  flex-col text-center lg:text-left mb-2 lg:mb-10">
+            
             <span class=" ">
               {texts && texts.map((text) => (
                 <span
-                  class={`  ${BOLDS[text.bold]}
+                class={`
+                ${BOLDS[text.bold]}
                 ${COLOR[text.color]}
                 ${text.italic && "italic"}
                 ${text.uppercase && "uppercase"}
                 ${SIZE[text.size]}
+               `}
+                >
+                  {text.label + "  "}
+                  {text.lineBreak && <br />}
+                </span>
+              ))}
+            </span>
+
+           
+          </div>
+          <div class="flex lg:hidden  flex-col text-center lg:text-left mb-2 lg:mb-10">
+            
+            <span class=" ">
+              {texts && texts.map((text) => (
+                <span
+                class={`
+                ${BOLDS[text.bold]}
+                ${COLOR[text.color]}
+                ${text.italic && "italic"}
+                ${text.uppercase && "uppercase"}
+               
                 ${SIZEMOBILE[text.sizeMobile]}`}
                 >
                   {text.label + "  "}
@@ -106,6 +129,8 @@ export default function BannnerGrid({
                 </span>
               ))}
             </span>
+
+           
           </div>
 
           {text &&
