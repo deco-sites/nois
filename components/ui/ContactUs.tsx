@@ -11,7 +11,7 @@ export default function BannnerGrid({ href }: Props) {
   const icon = "/paper-plane-outline.svg";
 
   return (
-    <div class="w-full bg-[#1E2D32] py-[40px] px-[100px]  ">
+    <div class="w-full bg-[#1E2D32] py-[40px] px-[30px] lg:px-[100px]  ">
       <section
         href={href}
         class="flex items-start w-full h-[300px] bg-gradient-to-t from-[#9990FF]  to-[#76DBD3] py-[60px]  px-[50px] rounded-[50px] "

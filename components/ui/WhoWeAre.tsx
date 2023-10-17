@@ -14,7 +14,7 @@ export default function BannnerGrid({
 
   return (
     <div class="w-full bg-[#1E2D32] py-[40px]  ">
-      <section class="flex items-center w-full h-[650px] bg-gradient-to-b from-[#9990FF]  to-[#76DBD3]  px-[100px] rounded-b-[50px] ">
+      <section class="flex items-center w-full h-[650px] bg-gradient-to-b from-[#9990FF]  to-[#76DBD3]  px-[30px] lg:px-[100px] rounded-b-[50px] ">
         <div class=" flex flex-col items-start ">
           <div class="flex  flex-row justify-center items-center text-left gap-5 mb-5">
             <div class="flex flex-col text-left">
