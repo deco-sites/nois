@@ -76,7 +76,7 @@ function Footer(
               alt={"Icon nois"}
               loading={"lazy"}
             />
-            <img 
+            <img
               src={icon}
               width={35}
               height={40}
@@ -100,7 +100,11 @@ function Footer(
 
             <div class=" flex flex-row justify-between w-full items-end gap-6 text-xs lg:text-xl shrink-0">
               <div class="flex flex-row items-end gap-10">
-                <a href="/" aria-label="Page logo" class="block w-[80px] lg:w-[120px]  ">
+                <a
+                  href="/"
+                  aria-label="Page logo"
+                  class="block w-[80px] lg:w-[120px]  "
+                >
                   <img
                     src={logo}
                     width={120}
@@ -109,7 +113,7 @@ function Footer(
                     alt={"Logo nois"}
                     loading={"lazy"}
                   />
-                   <img 
+                  <img
                     src={logo}
                     width={80}
                     height={35}
@@ -144,7 +148,6 @@ function Footer(
                   loading={"lazy"}
                 />
               </a>
-              
             </div>
           </FooterContainer>
         </div>
