@@ -26,7 +26,11 @@ export default function BannnerGrid({
               </span>
             </div>
 
-            <a href="/" aria-label="Page logo" class="hidden lg:block w-[60px]  ">
+            <a
+              href="/"
+              aria-label="Page logo"
+              class="hidden lg:block w-[60px]  "
+            >
               <img
                 src={icon}
                 width={65}
@@ -46,7 +50,7 @@ export default function BannnerGrid({
                 </span>
               </div>
             )}
-            <div class="w-full flex justify-center py-5  ">
+          <div class="w-full flex justify-center py-5  ">
             <a href="/" aria-label="Page logo" class="lg:hidden  block ">
               <img
                 src={icon}
@@ -57,7 +61,7 @@ export default function BannnerGrid({
                 loading={"lazy"}
               />
             </a>
-            </div>
+          </div>
         </div>
       </section>
     </div>
