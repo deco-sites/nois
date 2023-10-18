@@ -26,7 +26,7 @@ export default function BannnerGrid({ href }: Props) {
 
             <a
               href={href}
-              class='hidden lg:flex'
+              class="hidden lg:flex"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="PaperPlane icon"
@@ -41,7 +41,7 @@ export default function BannnerGrid({ href }: Props) {
 
             <a
               href={href}
-              class='lg:hidden flex'
+              class="lg:hidden flex"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="PaperPlane icon"
@@ -53,7 +53,6 @@ export default function BannnerGrid({ href }: Props) {
                 id="PaperPlane"
               />
             </a>
-            
           </div>
 
           <div class="flex text-left text-2xl lg:text-5xl w-full lg:leading-10">
