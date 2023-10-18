@@ -50,7 +50,7 @@ export default function BannnerGrid({
                 </span>
               </div>
             )}
-          <div class="w-full flex justify-center py-5  ">
+          <div class="w-full flex justify-center py-[30px]  ">
             <a href="/" aria-label="Page logo" class="lg:hidden  block ">
               <img
                 src={icon}

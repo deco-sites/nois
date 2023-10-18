@@ -53,8 +53,8 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
           media="(max-width: 767px)"
           fetchPriority={lcp ? "high" : "auto"}
           src={mobile}
-          width={360}
-          height={800}
+          width={250}
+          height={200}
         />
         <Source
           media="(min-width: 768px)"
@@ -146,9 +146,9 @@ function BannerCarousel(
 
   return (
     <>
-      <div class="text-5xl flex flex-row justify-center items-center w-full px-[30px] lg:px-[100px] pt-[65px] bg-[#1E2D32]">
-        <span class="font-medium  text-5xl text-white mr-4">{title}</span>
-        <span class="font-bold text-transparent bg-clip-text bg-gradient-to-t  text-5xl from-[#9990FF]  to-[#76DBD3]">
+      <div class="text-2xl lg:text-5xl flex flex-row justify-center items-center w-full px-[30px] lg:px-[100px] pt-[65px] bg-[#1E2D32]">
+        <span class="font-medium  text-2xl lg:text-5xl text-white mr-2 lg:mr-4">{title}</span>
+        <span class="font-bold text-transparent bg-clip-text bg-gradient-to-t  text-2xl lg:text-5xl from-[#9990FF]  to-[#76DBD3]">
           {titleHighlight}
         </span>
       </div>
