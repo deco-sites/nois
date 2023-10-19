@@ -35,11 +35,11 @@ export type Text = {
   lineBreak: boolean;
 };
 const SCALE = {
-  "1": "scale-100",
-  "1.05": "scale-105",
-  "1.10": "scale-110",
-  "1.25": "scale-125",
-  "1.5": "scale-150",
+  "1": "lg:scale-100",
+  "1.05": "lg:scale-105",
+  "1.10": "lg:scale-110",
+  "1.25": "lg:scale-125",
+  "1.5": "lg:scale-150",
 };
 
 const BOLDS = {
@@ -163,8 +163,8 @@ export default function BannnerGrid({ text, image, texts }: Props) {
                   media="(max-width: 767px)"
                   fetchPriority={"auto"}
                   src={image.mobile ? (image.mobile) : (image.desktop)}
-                  width={400}
-                  height={320}
+                  width={450}
+                  height={350}
                 />
                 <Source
                   media="(min-width: 768px)"
@@ -175,7 +175,7 @@ export default function BannnerGrid({ text, image, texts }: Props) {
                 />
 
                 <img
-                  class={`w-full ${SCALE[image.scale]}`}
+                  class={`w-full object-cover ${SCALE[image.scale]}`}
                   loading={"lazy"}
                   src={image.desktop}
                   alt={image.altImage}
