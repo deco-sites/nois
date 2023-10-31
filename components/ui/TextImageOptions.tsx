@@ -88,9 +88,11 @@ export default function BannnerGrid({
 }: Props) {
   return (
     <div class="w-full bg-[#1E2D32]  py-[100px] ">
-      <section class="flex flex-col lg:flex-row justify-center lg:justify-between items-center w-full mx-auto h-full px-[30px] lg:px-[100px]">
-        <div class=" flex flex-col justify-center items-start gap-2 max-w-[540px] mb-5 ">
-          <div class="hidden lg:flex  flex-col text-center lg:text-left mb-2 lg:mb-10">
+      <div class="conatiner">
+
+      <section class="flex flex-col lg:flex-row justify-center lg:justify-between items-center w-full mx-auto h-full">
+        <div class=" flex flex-col w-full justify-center items-start gap-2  mb-5 text-center">
+          <div class="hidden lg:flex w-full flex-col text-center lg:text-left mb-2 lg:mb-10">
             <span class=" ">
               {texts && texts.map((text) => (
                 <p
@@ -109,7 +111,7 @@ export default function BannnerGrid({
               ))}
             </span>
           </div>
-          <div class="flex lg:hidden  flex-col text-center lg:text-left mb-2 lg:mb-10">
+          <div class="flex lg:hidden w-full flex-col text-center lg:text-left mb-2 lg:mb-10 px-5">
             <span class=" ">
               {texts && texts.map((text) => (
                 <span
@@ -131,7 +133,7 @@ export default function BannnerGrid({
           {text &&
             (
               <>
-                <div class="hidden lg:flex text-center lg:text-left w-full">
+                <div class="hidden lg:flex text-center lg:text-left w-full px-5">
                   <span
                     class={`  ${BOLDS[text.bold]}
                 ${COLOR[text.color]}
@@ -189,6 +191,7 @@ export default function BannnerGrid({
             )}
         </div>
       </section>
+      </div>
     </div>
   );
 }

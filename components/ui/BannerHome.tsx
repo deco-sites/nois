@@ -110,14 +110,6 @@ function BannerItem(
 
         <Buttons saibaMaisLink={saibaMaisLink} />
 
-        <img
-          src={logo}
-          width={60}
-          height={65}
-          class="shrink-0 w-auto mt-4 "
-          alt={"Icon nois"}
-          loading={"lazy"}
-        />
       </div>
     </div>
   );
