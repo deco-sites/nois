@@ -1,17 +1,24 @@
 import Icon from "$store/components/ui/Icon.tsx";
 
 export interface Props {
-  phone?: number;
+  phone: number;
+  message: string;
 }
 
-function WhatsApp({ phone }: Props) {
+function WhatsApp({ phone, message }: Props) {
   if (!phone) {
     return null;
   }
 
+
+  const wppLink = (phone: number, message: string) => {
+    const messageEncoded = encodeURIComponent(message);
+    return `https://api.whatsapp.com/send/?phone=${phone}&text=${messageEncoded}&type=phone_number&app_absent=0&lang=pt_BR`;
+  }
+
   return (
     <a
-      href={`https://api.whatsapp.com/send/?phone=${phone}&text&type=phone_number&app_absent=0&text=Ol%C3%A1%20Daniel%2C%20gostaria%20de%20saber%20mais%20sobre%20como%20a%20nois%20agency%20pode%20me%20ajudar%20a%20alavancar%20meu%20neg%C3%B3cio!&lang=pt_BR`}
+      href={wppLink(phone, message)}
       class="fixed bottom-6 right-6 z-50 group"
       aria-label="Chat on WhatsApp"
     >
