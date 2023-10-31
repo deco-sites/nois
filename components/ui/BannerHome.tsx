@@ -45,9 +45,9 @@ function Buttons({ saibaMaisLink }: { saibaMaisLink: string }) {
   return (
     <a
       href={saibaMaisLink}
-      class="flex cursor-pointer items-center justify-center z-10 col-start-1 row-start-2 border-2 text-base lg:text-[20px] px-[25px] py-[10px] mb-8 rounded-full border-[#76bdd3]"
+      class="flex cursor-pointer items-center justify-center z-10 col-start-1 row-start-2 border-2 text-base lg:text-[20px] px-[25px] py-[10px] mb-8 rounded-full border-[#76DBD3] hover:bg-[#76DBD3] hover:text-black transition-all duration-200"
     >
-      Saiba mais
+      Fale com um consultor
     </a>
   );
 }
@@ -68,14 +68,14 @@ function BannerItem(
   return (
     <div
       aria-label={action?.text}
-      class="relative overflow-y-hidden w-full h-[100vh]"
+      class="relative overflow-y-hidden w-full h-[90vh]"
     >
       <Picture preload={lcp}>
         <Source
           media="(max-width: 767px)"
           fetchPriority={lcp ? "high" : "auto"}
           src={mobile}
-          width={390}
+          width={690}
         />
         <Source
           media="(max-width: 1920px)"
@@ -92,7 +92,7 @@ function BannerItem(
         />
       </Picture>
 
-      <div class="absolute top-[100px] bottom-0 m-auto left-0 right-0  flex flex-col justify-center items-center w-full gap-8   text-[#76DBD3] ">
+      <div class="absolute top-[100px] bottom-0 m-auto left-0 right-0  flex flex-col justify-around items-center w-full gap-8   text-[#76DBD3] ">
         <div class=" flex flex-col justify-center items-center w-full gap-5 mb-8  text-[#76DBD3]">
           <span class="text-4xl lg:text-6xl text-base-100">
             {action!.title}
