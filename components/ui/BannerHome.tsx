@@ -68,7 +68,7 @@ function BannerItem(
   return (
     <div
       aria-label={action?.text}
-      class="relative overflow-y-hidden w-full h-full"
+      class="relative overflow-y-hidden w-full h-[100vh]"
     >
       <Picture preload={lcp}>
         <Source
@@ -76,14 +76,12 @@ function BannerItem(
           fetchPriority={lcp ? "high" : "auto"}
           src={mobile}
           width={390}
-          height={845}
         />
         <Source
-          media="(min-width: 768px)"
+          media="(max-width: 1920px)"
           fetchPriority={lcp ? "high" : "auto"}
           src={desktop}
           width={1920}
-          height={950}
         />
 
         <img

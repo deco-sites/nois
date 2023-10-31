@@ -93,8 +93,9 @@ export default function BannnerGrid({
           <div class="hidden lg:flex  flex-col text-center lg:text-left mb-2 lg:mb-10">
             <span class=" ">
               {texts && texts.map((text) => (
-                <span
+                <p
                   class={`
+                my-4
                 ${BOLDS[text.bold]}
                 ${COLOR[text.color]}
                 ${text.italic && "italic"}
@@ -104,7 +105,7 @@ export default function BannnerGrid({
                 >
                   {text.label + "  "}
                   {text.lineBreak && <br />}
-                </span>
+                </p>
               ))}
             </span>
           </div>

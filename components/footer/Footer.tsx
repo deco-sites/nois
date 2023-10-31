@@ -65,7 +65,7 @@ function Footer(
                 Tem dúvidas ou precisa de mais informações?
               </span>
               <span>
-                nois@hotmail.com
+                contato@nois.agency
               </span>
             </div>
             <img
@@ -122,10 +122,10 @@ function Footer(
                     loading={"lazy"}
                   />
                 </a>
-                <a href="/" aria-label="Page logo link">nois.com.br</a>
+                <a href="/" aria-label="Page logo link">nois.agency</a>
               </div>
 
-              <a
+              {/* <a
                 href={""}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -147,7 +147,7 @@ function Footer(
                   alt={"arrow up"}
                   loading={"lazy"}
                 />
-              </a>
+              </a> */}
             </div>
           </FooterContainer>
         </div>
