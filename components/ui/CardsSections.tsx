@@ -74,20 +74,20 @@ function CardItem(
   const arrowV = "/ArrowVerde.svg";
 
   return (
-    <div
-      class={`flex flex-col m-10 border w-[250px] h-[250px] justify-center items-center ${
-        COLOR[product.borderColor]
-      } ${RADIUS_MOBILE[mobile]} ${RADIUS_DESKTOP[desktop]}   `}
-      data-deco="view-product"
-      id={`item-card-${product.alt}`}
-    >
-      <a
+    <a
         href={product.href}
-        class="flex w-full mr-[3.5rem] mt-10 justify-end"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram logo"
       >
+    <div
+      class={`flex flex-col m-10 border w-[250px] h-[250px] justify-center items-center ${
+        COLOR[product.borderColor]
+      } ${RADIUS_MOBILE[mobile]} ${RADIUS_DESKTOP[desktop]} hover:border-2`}
+      data-deco="view-product"
+      id={`item-card-${product.alt}`}
+    >
+      <div class="flex w-full mr-[3.5rem] mt-10 justify-end">
         <img
           src={product.borderColor == 1 ? arrowR : arrowV}
           width={30}
@@ -96,7 +96,8 @@ function CardItem(
           alt={"arrow up"}
           loading={"lazy"}
         />
-      </a>
+      </div>
+      
 
       <div
         class={`flex w-full h-full justify-center items-center pb-10  px-10`}
@@ -110,6 +111,7 @@ function CardItem(
         />
       </div>
     </div>
+    </a>
   );
 }
 

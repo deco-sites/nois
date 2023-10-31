@@ -42,10 +42,10 @@ function Navbar(
           >
             <Icon
               class="text-[#76DBD3]"
-              width={30}
-              height={30}
-              id="Instagram"
-              strokeWidth={2}
+              width={25}
+              height={25}
+              id="LinkedIn"
+              strokeWidth={1}
             />
           </a>
         </div>

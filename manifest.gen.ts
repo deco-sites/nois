@@ -17,8 +17,9 @@ import * as $$$$$$11 from "./sections/CardsSections.tsx";
 import * as $$$$$$12 from "./sections/Header.tsx";
 import * as $$$$$$13 from "./sections/SimpleTextList.tsx";
 import * as $$$$$$14 from "./sections/SectionTextImage.tsx";
-import * as $$$$$$15 from "./sections/ParagraphList.tsx";
-import * as $$$$$$16 from "./sections/Carousel.tsx";
+import * as $$$$$$15 from "./sections/WhatsApp.tsx";
+import * as $$$$$$16 from "./sections/ParagraphList.tsx";
+import * as $$$$$$17 from "./sections/Carousel.tsx";
 import * as $$$$$$$$$$$0 from "./apps/site.ts";
 
 const manifest = {
@@ -27,18 +28,19 @@ const manifest = {
     "deco-sites/nois/sections/BannerHome.tsx": $$$$$$6,
     "deco-sites/nois/sections/BannerSlider.tsx": $$$$$$3,
     "deco-sites/nois/sections/CardsSections.tsx": $$$$$$11,
-    "deco-sites/nois/sections/Carousel.tsx": $$$$$$16,
+    "deco-sites/nois/sections/Carousel.tsx": $$$$$$17,
     "deco-sites/nois/sections/ContactForm.tsx": $$$$$$10,
     "deco-sites/nois/sections/ContactUs.tsx": $$$$$$9,
     "deco-sites/nois/sections/Footer.tsx": $$$$$$7,
     "deco-sites/nois/sections/Header.tsx": $$$$$$12,
     "deco-sites/nois/sections/Hero.tsx": $$$$$$0,
-    "deco-sites/nois/sections/ParagraphList.tsx": $$$$$$15,
+    "deco-sites/nois/sections/ParagraphList.tsx": $$$$$$16,
     "deco-sites/nois/sections/SectionTextImage.tsx": $$$$$$14,
     "deco-sites/nois/sections/SimpleTextList.tsx": $$$$$$13,
     "deco-sites/nois/sections/TextImageGradient.tsx": $$$$$$1,
     "deco-sites/nois/sections/TextImageOptions.tsx": $$$$$$4,
     "deco-sites/nois/sections/Theme.tsx": $$$$$$5,
+    "deco-sites/nois/sections/WhatsApp.tsx": $$$$$$15,
     "deco-sites/nois/sections/WhoWeAre.tsx": $$$$$$8,
   },
   "apps": {
