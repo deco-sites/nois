@@ -10,11 +10,10 @@ function WhatsApp({ phone, message }: Props) {
     return null;
   }
 
-
   const wppLink = (phone: number, message: string) => {
     const messageEncoded = encodeURIComponent(message);
     return `https://api.whatsapp.com/send/?phone=${phone}&text=${messageEncoded}&type=phone_number&app_absent=0&lang=pt_BR`;
-  }
+  };
 
   return (
     <a
