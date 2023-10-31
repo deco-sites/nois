@@ -124,7 +124,10 @@ function CardsCamps(
           <div
             class={`w-full flex my-10 text-white justify-center items-center text-center text-5xl gap-2`}
           >
-            <p><span>Nossos</span> <span class={`text-[#9990ff]`}>Clientes</span> e <span class={`text-[#76DBD3]`}>Parceiros</span>
+            <p>
+              <span>Nossos</span> <span class={`text-[#9990ff]`}>Clientes</span>
+              {" "}
+              e <span class={`text-[#76DBD3]`}>Parceiros</span>
             </p>
           </div>
           <div class="flex flex-row flex-wrap justify-center items-center lg:justify-center">
