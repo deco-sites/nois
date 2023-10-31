@@ -3,16 +3,21 @@ import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 import { useState } from "preact/hooks";
 import { RefObject, useEffect, useRef } from "preact/compat";
 
-
 export interface Props {
-
+  fields: [Field];
 }
-  
+
+interface Field {
+  name: string;
+  label: string;
+  type: string;
+  required: boolean;
+  placeholder: string;
+}
 
 function ContactForm(
-  { }: Props,
+  { fields }: Props,
 ) {
-  
   const logo = "/IconLogo.png";
 
   const [message, setMessage] = useState("");

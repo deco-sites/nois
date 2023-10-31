@@ -125,7 +125,8 @@ function Footer(
                 <a href="/" aria-label="Page logo link">nois.agency</a>
               </div>
 
-              {/* <a
+              {
+                /* <a
                 href={""}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -147,7 +148,8 @@ function Footer(
                   alt={"arrow up"}
                   loading={"lazy"}
                 />
-              </a> */}
+              </a> */
+              }
             </div>
           </FooterContainer>
         </div>
