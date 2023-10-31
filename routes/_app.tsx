@@ -16,7 +16,6 @@ export default function App(props: AppProps) {
       {/* Add Tag Manager script during production only. To test it locally remove the condition */}
       {!!context.deploymentId && trackingId && (
         <GoogleTagManager trackingId={trackingId} />
-        
       )}
       <props.Component />
     </>

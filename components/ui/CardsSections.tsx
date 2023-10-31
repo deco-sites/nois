@@ -75,42 +75,41 @@ function CardItem(
 
   return (
     <a
-        href={product.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Instagram logo"
-      >
-    <div
-      class={`flex flex-col m-10 border w-[250px] h-[250px] justify-center items-center ${
-        COLOR[product.borderColor]
-      } ${RADIUS_MOBILE[mobile]} ${RADIUS_DESKTOP[desktop]} hover:border-2`}
-      data-deco="view-product"
-      id={`item-card-${product.alt}`}
+      href={product.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram logo"
     >
-      <div class="flex w-full mr-[3.5rem] mt-10 justify-end">
-        <img
-          src={product.borderColor == 1 ? arrowR : arrowV}
-          width={30}
-          height={30}
-          class="shrink-0 w-auto"
-          alt={"arrow up"}
-          loading={"lazy"}
-        />
-      </div>
-      
-
       <div
-        class={`flex w-full h-full justify-center items-center pb-10  px-10`}
+        class={`flex flex-col m-10 border w-[250px] h-[250px] justify-center items-center ${
+          COLOR[product.borderColor]
+        } ${RADIUS_MOBILE[mobile]} ${RADIUS_DESKTOP[desktop]} hover:border-2`}
         data-deco="view-product"
+        id={`item-card-${product.alt}`}
       >
-        <img
-          class={`w-full object-cover `}
-          loading={"lazy"}
-          src={product.desktop}
-          alt={product.alt}
-        />
+        <div class="flex w-full mr-[3.5rem] mt-10 justify-end">
+          <img
+            src={product.borderColor == 1 ? arrowR : arrowV}
+            width={30}
+            height={30}
+            class="shrink-0 w-auto"
+            alt={"arrow up"}
+            loading={"lazy"}
+          />
+        </div>
+
+        <div
+          class={`flex w-full h-full justify-center items-center pb-10  px-10`}
+          data-deco="view-product"
+        >
+          <img
+            class={`w-full object-cover `}
+            loading={"lazy"}
+            src={product.desktop}
+            alt={product.alt}
+          />
+        </div>
       </div>
-    </div>
     </a>
   );
 }
