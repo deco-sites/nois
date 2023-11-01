@@ -33,7 +33,7 @@ export default function BannnerGrid({
           {text &&
             (
               <div class="flex text-center my-[20px] lg:my-[40px] lg:text-left w-full">
-                <span class="text-[15px] lg:text-[23px] text-white">
+                <span class="text-[15px] lg:text-[23px] text-white font-extralight">
                   {text}
                 </span>
               </div>
