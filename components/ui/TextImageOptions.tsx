@@ -88,13 +88,13 @@ export default function BannnerGrid({
 }: Props) {
   return (
     <div class="w-full bg-[#1E2D32]  py-[100px] ">
-        <section class="flex flex-col lg:flex-row justify-between items-center w-full mx-auto h-full lg:px-[100px] px-[20px]">
-          <div class=" flex flex-col w-full justify-center items-start gap-2  mb-5 text-center lg:max-w-[540px]">
-            <div class="hidden lg:flex w-full flex-col text-center lg:text-left mb-2 lg:mb-10">
-              <span class=" ">
-                {texts && texts.map((text) => (
-                  <p
-                    class={`
+      <section class="flex flex-col lg:flex-row justify-between items-center w-full mx-auto h-full lg:px-[100px] px-[20px]">
+        <div class=" flex flex-col w-full justify-center items-start gap-2  mb-5 text-center lg:max-w-[540px]">
+          <div class="hidden lg:flex w-full flex-col text-center lg:text-left mb-2 lg:mb-10">
+            <span class=" ">
+              {texts && texts.map((text) => (
+                <p
+                  class={`
                 my-4
                 ${BOLDS[text.bold]}
                 ${COLOR[text.color]}
@@ -102,93 +102,93 @@ export default function BannnerGrid({
                 ${text.uppercase && "uppercase"}
                 ${SIZE[text.size]}
                `}
-                  >
-                    {text.label + "  "}
-                    {text.lineBreak && <br />}
-                  </p>
-                ))}
-              </span>
-            </div>
-            <div class="flex lg:hidden w-full flex-col text-center lg:text-left mb-2 lg:mb-10">
-              <span class=" ">
-                {texts && texts.map((text) => (
-                  <span
-                    class={`
+                >
+                  {text.label + "  "}
+                  {text.lineBreak && <br />}
+                </p>
+              ))}
+            </span>
+          </div>
+          <div class="flex lg:hidden w-full flex-col text-center lg:text-left mb-2 lg:mb-10">
+            <span class=" ">
+              {texts && texts.map((text) => (
+                <span
+                  class={`
                 ${BOLDS[text.bold]}
                 ${COLOR[text.color]}
                 ${text.italic && "italic"}
                 ${text.uppercase && "uppercase"}
                
                 ${SIZEMOBILE[text.sizeMobile]}`}
-                  >
-                    {text.label + "  "}
-                    {text.lineBreak && <br />}
-                  </span>
-                ))}
-              </span>
-            </div>
+                >
+                  {text.label + "  "}
+                  {text.lineBreak && <br />}
+                </span>
+              ))}
+            </span>
+          </div>
 
-            {text &&
-              (
-                <>
-                  <div class="hidden lg:flex text-center lg:text-left w-full">
-                    <span
-                      class={`  ${BOLDS[text.bold]}
+          {text &&
+            (
+              <>
+                <div class="hidden lg:flex text-center lg:text-left w-full">
+                  <span
+                    class={`  ${BOLDS[text.bold]}
                 ${COLOR[text.color]}
                 ${text.italic && "italic"}
                 ${text.uppercase && "uppercase"}
                 ${SIZE[text.size]}
             `}
-                    >
-                      {text.label}
-                    </span>
-                  </div>
-                  <div class=" flex lg:hidden text-center lg:text-left w-full">
-                    <span
-                      class={`  ${BOLDS[text.bold]}
+                  >
+                    {text.label}
+                  </span>
+                </div>
+                <div class=" flex lg:hidden text-center lg:text-left w-full">
+                  <span
+                    class={`  ${BOLDS[text.bold]}
                ${COLOR[text.color]}
                ${text.italic && "italic"}
                ${text.uppercase && "uppercase"}
                ${SIZEMOBILE[text.sizeMobile]}`}
-                    >
-                      {text.label}
-                    </span>
-                  </div>
-                </>
-              )}
-          </div>
+                  >
+                    {text.label}
+                  </span>
+                </div>
+              </>
+            )}
+        </div>
 
-          <div
-            class={`flex justify-center items-end w-full lg:w-1/2`}
-          >
-            {image &&
-              (
-                <Picture preload={false}>
-                  <Source
-                    media="(max-width: 767px)"
-                    fetchPriority={"auto"}
-                    src={image.mobile ? (image.mobile) : (image.desktop)}
-                    width={350}
-                    height={320}
-                  />
-                  <Source
-                    media="(min-width: 768px)"
-                    fetchPriority={"auto"}
-                    src={image.desktop}
-                    width={1900}
-                    height={1840}
-                  />
+        <div
+          class={`flex justify-center items-end w-full lg:w-1/2`}
+        >
+          {image &&
+            (
+              <Picture preload={false}>
+                <Source
+                  media="(max-width: 767px)"
+                  fetchPriority={"auto"}
+                  src={image.mobile ? (image.mobile) : (image.desktop)}
+                  width={350}
+                  height={320}
+                />
+                <Source
+                  media="(min-width: 768px)"
+                  fetchPriority={"auto"}
+                  src={image.desktop}
+                  width={1900}
+                  height={1840}
+                />
 
-                  <img
-                    class={`w-full ${SCALE[image.scale]}`}
-                    loading={"lazy"}
-                    src={image.desktop}
-                    alt={image.altImage}
-                  />
-                </Picture>
-              )}
-          </div>
-        </section>
+                <img
+                  class={`w-full ${SCALE[image.scale]}`}
+                  loading={"lazy"}
+                  src={image.desktop}
+                  alt={image.altImage}
+                />
+              </Picture>
+            )}
+        </div>
+      </section>
     </div>
   );
 }
