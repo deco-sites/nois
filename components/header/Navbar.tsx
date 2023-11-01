@@ -21,14 +21,14 @@ function Navbar(
           </ul>
         </div>
 
-        <div class="flex-none  flex   mx-auto items-center   shrink-0">
+        <div class="flex-none  flex   mx-auto items-center py-4 shrink-0">
           <a href="/" aria-label="Page logo" class="block w-[120px]  ">
             <img
               src={logo}
               width={120}
               height={50}
               class="shrink-0 w-auto "
-              alt={"Logo nois"}
+              alt={"Nois Agency Logo"}
               loading={"lazy"}
             />
           </a>
@@ -52,7 +52,7 @@ function Navbar(
       </div>
 
       {/* Mobile Version */}
-      <div class="flex lg:hidden flex-row justify-between items-center w-full ">
+      <div class="flex lg:hidden flex-row justify-between items-center w-full py-4 ">
         {
           /* <div class={"w-[480px] flex justify-start items-center text-base"}>
           <ul class="flex justify-start font-medium text-[#76DBD3]  shrink-0  ">
@@ -92,10 +92,10 @@ function Navbar(
           >
             <Icon
               class="text-[#76DBD3]"
-              width={30}
-              height={30}
-              id="Instagram"
-              strokeWidth={2}
+              width={25}
+              height={25}
+              id="LinkedIn"
+              strokeWidth={1}
             />
           </a>
         </div>

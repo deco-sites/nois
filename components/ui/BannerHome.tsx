@@ -68,7 +68,7 @@ function BannerItem(
   return (
     <div
       aria-label={action?.text}
-      class="relative overflow-y-hidden w-full h-[90vh]"
+      class="relative overflow-y-hidden w-full h-[70vh] lg:h-[90vh]"
     >
       <Picture preload={lcp}>
         <Source
@@ -92,7 +92,7 @@ function BannerItem(
         />
       </Picture>
 
-      <div class="absolute top-[100px] bottom-0 m-auto left-0 right-0  flex flex-col justify-around items-center w-full gap-8   text-[#76DBD3] ">
+      <div class="absolute top-[35px] lg:top-[100px] bottom-0 m-auto left-0 right-0  flex flex-col justify-around items-center w-full gap-8   text-[#76DBD3] ">
         <div class=" flex flex-col justify-center items-center w-full gap-5 mb-8  text-[#76DBD3]">
           <span class="text-4xl lg:text-6xl text-base-100 font-extralight">
             {action!.title}
@@ -103,7 +103,7 @@ function BannerItem(
           <span class="text-4xl font-extrabold lg:text-6xl text-base-100">
             {action!.subTitle}
           </span>
-          <span class="text-base lg:text-xl text-white text-center text-base-100 max-w-[200px] lg:max-w-[294px] font-extralight">
+          <span class="text-base lg:text-xl text-white text-center text-base-100 my-6 max-w-[300px] lg:max-w-[540px] font-extralight">
             {action!.text}
           </span>
         </div>
