@@ -25,8 +25,8 @@ function WhatsApp({ phone, message }: Props) {
         class="bg-[#45D268] text-center text-white p-2 rounded-full shadow-lg w-[80px] h-[80px] transition-all duration-200 group-hover:w-[250px] group-hover:h-[250px] px-2 overflow-hidden"
         aria-label="Chat on WhatsApp"
       >
-        <Icon id="WhatsApp" size={42} class="flex w-full" />
-        <span class="hidden w-full group-hover:inline group-hover:mx-2 transition-colors duration-500 py-5">
+        <Icon id="WhatsApp" size={42} class="flex w-full group-hover:mb-2" />
+        <span class="hidden w-full group-hover:inline group-hover:mx-2 transition-colors duration-500 py-5 font-semibold">
           Fale com um consultor
         </span>
       </button>
