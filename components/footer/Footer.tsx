@@ -159,13 +159,16 @@ function Footer(
           <FooterContainer class="flex flex-row justify-between w-full">
             <div class="flex flex-row items-end text-end gap-10">
               <span class="text-xs lg:text-base">
-                Powered by <a href="deco.cx" target="_blank"><Icon
-                  class="text-[#76DBD3] inline ml-2"
-                  width={60}
-                  height={27}
-                  id="Deco"
-                  strokeWidth={1}
-                /></a>
+                Powered by{" "}
+                <a href="deco.cx" target="_blank">
+                  <Icon
+                    class="text-[#76DBD3] inline ml-2"
+                    width={60}
+                    height={27}
+                    id="Deco"
+                    strokeWidth={1}
+                  />
+                </a>
               </span>
             </div>
             <div class="flex flex-row object-center justify-start items-end text-end gap-5 pr-">
@@ -176,11 +179,11 @@ function Footer(
                 aria-label="Instagram logo"
               >
                 <img
-                    src={decoPartnerLogo}
-                    class="flex shrink-0 w-[80px] "
-                    alt={"Icon nois"}
-                    loading={"lazy"}
-                  />
+                  src={decoPartnerLogo}
+                  class="flex shrink-0 w-[80px] "
+                  alt={"Icon nois"}
+                  loading={"lazy"}
+                />
               </a>
               <a
                 href={Href_Instagram}
