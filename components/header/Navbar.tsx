@@ -61,17 +61,9 @@ function Navbar(
         </div> */
         }
 
-        <Button
-          class="bg-transparent hover:bg-transparent  border-none p-0 m-0 w-[30px] text-[#76DBD3]"
-          aria-label="open menu"
-          onClick={() => {
-            displayMenu.value = true;
-          }}
-        >
-          <Icon id="Bars3" width={20} height={20} strokeWidth={1} />
-        </Button>
+      
 
-        <div class="flex-none  flex  shrink-0">
+        <div class="flex-none  flex  shrink-0 justify-start">
           <a href="/" aria-label="Page logo" class="block w-[120px]  ">
             <img
               src={logo}
