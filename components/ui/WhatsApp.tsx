@@ -18,7 +18,7 @@ function WhatsApp({ phone, message }: Props) {
   return (
     <a
       href={wppLink(phone, message)}
-      class="fixed bottom-6 right-6 z-50 group"
+      class="fixed bottom-14 right-6 z-50 group"
       aria-label="Chat on WhatsApp"
     >
       <button

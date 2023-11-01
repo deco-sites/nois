@@ -37,6 +37,7 @@ export type AvailableIcons =
   | "ArrowsPointingOut"
   | "ArrowUpNew"
   | "PaperPlane"
+  | "DecoPartner"
   | "LinkedIn"
   | "ArrowNew";
 

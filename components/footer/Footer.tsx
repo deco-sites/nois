@@ -51,6 +51,7 @@ function Footer(
 ) {
   const icon = "/LogoGrad.png";
   const logo = "/LogoNois.svg";
+  const decoPartnerLogo = "/deco-partner-03.png";
   const arrow = "/arrowup.svg";
 
   return (
@@ -158,14 +159,29 @@ function Footer(
           <FooterContainer class="flex flex-row justify-between w-full">
             <div class="flex flex-row items-end text-end gap-10">
               <span class="text-xs lg:text-base">
-                Cookie setting
-              </span>
-
-              <span class="text-xs lg:text-base">
-                © 2023 nois Labs, Inc.
+                Powered by <a href="deco.cx" target="_blank"><Icon
+                  class="text-[#76DBD3] inline ml-2"
+                  width={60}
+                  height={27}
+                  id="Deco"
+                  strokeWidth={1}
+                /></a>
               </span>
             </div>
-            <div class="flex flex-row object-center justify-start items-end text-end gap-5">
+            <div class="flex flex-row object-center justify-start items-end text-end gap-5 pr-">
+              <a
+                href="https://deco.cx"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram logo"
+              >
+                <img
+                    src={decoPartnerLogo}
+                    class="flex shrink-0 w-[80px] "
+                    alt={"Icon nois"}
+                    loading={"lazy"}
+                  />
+              </a>
               <a
                 href={Href_Instagram}
                 target="_blank"
