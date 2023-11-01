@@ -109,7 +109,6 @@ function BannerItem(
         </div>
 
         <Buttons saibaMaisLink={saibaMaisLink} />
-
       </div>
     </div>
   );
