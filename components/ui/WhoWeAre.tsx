@@ -13,8 +13,8 @@ export default function BannnerGrid({
   const icon = "/IconBlack.svg";
 
   return (
-    <div class="w-full bg-[#1E2D32] py-[40px]  ">
-      <section class="flex items-center w-full h-[650px] bg-gradient-to-b from-[#9990FF]  to-[#76DBD3]  px-[30px] lg:px-[100px] lg:rounded-b-[50px] ">
+    <div class="w-full bg-[#1E2D32] py-[20px]  ">
+      <section class="flex items-center w-full h-[500px] bg-gradient-to-b from-[#9990FF]  to-[#76DBD3]  px-[30px] lg:px-[100px] lg:rounded-b-[50px] ">
         <div class=" flex flex-col items-start ">
           <div class="flex  flex-row justify-center items-center lg:justify-start w-full  lg:text-left gap-2 lg:gap-5 mb-5">
             <div class="flex flex-row text-center lg:flex-col lg:text-left  ">

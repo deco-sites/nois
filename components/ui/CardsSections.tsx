@@ -79,27 +79,36 @@ function CardItem(
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Instagram logo"
+      class={'w-1/2 justify-center  flex mb-[10px] lg:mb-0  lg:w-[350px] lg:h-[ 350px]'}
     >
       <div
-        class={`flex flex-col m-10 border w-[250px] h-[250px] justify-center items-center ${
+        class={`flex flex-col lg:m-10 border  w-[125px] h-[125px]  lg:w-[250px] lg:h-[250px] justify-center items-center ${
           COLOR[product.borderColor]
         } ${RADIUS_MOBILE[mobile]} ${RADIUS_DESKTOP[desktop]} hover:border-2`}
         data-deco="view-product"
         id={`item-card-${product.alt}`}
       >
-        <div class="flex w-full mr-[3.5rem] mt-10 justify-end">
+        <div class="flex w-full mr-[2rem] lg:mr-[4rem] mt-5 lg:mt-10 justify-end">
           <img
             src={product.borderColor == 1 ? arrowR : arrowV}
             width={30}
             height={30}
-            class="shrink-0 w-auto"
+            class="shrink-0 w-auto hidden lg:flex"
+            alt={"arrow up"}
+            loading={"lazy"}
+          />
+          <img
+            src={product.borderColor == 1 ? arrowR : arrowV}
+            width={15}
+            height={15}
+            class="shrink-0 w-auto flex lg:hidden"
             alt={"arrow up"}
             loading={"lazy"}
           />
         </div>
 
         <div
-          class={`flex w-full h-full justify-center items-center pb-10  px-10`}
+          class={`flex w-full h-full justify-center items-center lg:pb-10 pb-5  lg:px-10 px-5`}
           data-deco="view-product"
         >
           <img
@@ -119,18 +128,18 @@ function CardsCamps(
 ) {
   return (
     <>
-      <div class="w-full py-20 bg-[#1E2D32]">
+      <div class="w-full py-2 bg-[#1E2D32]">
         <div class="container mx-auto flex flex-col justify-center items-center">
           <div
-            class={`w-full flex my-10 text-white justify-center items-center text-center text-5xl gap-2`}
+            class={`w-full flex my-10 text-white justify-center items-center text-center text-3xl lg:text-5xl gap-2 px-5`}
           >
             <p>
-              <span>Nossos</span> <span class={`text-[#9990ff]`}>Clientes</span>
+              <span>Nossos</span> <span class={`text-[#9990ff] font-bold`}>Clientes</span>
               {" "}
-              e <span class={`text-[#76DBD3]`}>Parceiros</span>
+              e <span class={`text-[#76DBD3] font-bold`}>Parceiros</span>
             </p>
           </div>
-          <div class="flex flex-row flex-wrap justify-center items-center lg:justify-center">
+          <div class="flex flex-row flex-wrap justify-center items-center lg:justify-center ">
             {productCard !== undefined
               ? (productCard.map((product, index) => (
                 <CardItem

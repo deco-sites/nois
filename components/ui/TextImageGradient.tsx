@@ -12,6 +12,11 @@ export interface Props {
 export type Img = {
   desktop: LiveImage;
   mobile?: LiveImage;
+  width: number;
+  widthMobile: number;
+  height:number;
+  heightMobile:number;
+
   altImage?: string;
   scale: "1" | "1.05" | "1.10" | "1.25" | "1.5";
 };
@@ -87,7 +92,7 @@ const COLOR = {
 
 export default function BannnerGrid({ text, image, texts }: Props) {
   return (
-    <div class="w-full  bg-[#1E2D32]   ">
+    <div class="w-full  bg-[#1E2D32]   py-20">
       <section class="flex flex-col lg:flex-row justify-center lg:justify-between items-center w-full  bg-gradient-to-b from-[#9990FF]  to-[#76DBD3] px-[30px] lg:px-[100px] py-[50px] lg:py-[0px] lg:rounded-b-[50px] ">
         <div class=" flex flex-col justify-center items-center lg:items-start gap-2 lg:max-w-[540px] mb-5">
           <div class="hidden lg:flex  flex-col text-center lg:text-left mb-5 lg:mb-10 w-full">
@@ -163,19 +168,19 @@ export default function BannnerGrid({ text, image, texts }: Props) {
                   media="(max-width: 767px)"
                   fetchPriority={"auto"}
                   src={image.mobile ? (image.mobile) : (image.desktop)}
-                  width={450}
-                  height={350}
+                  width={image.widthMobile}
+                  height={image.heightMobile}
                 />
                 <Source
                   media="(min-width: 768px)"
                   fetchPriority={"auto"}
                   src={image.desktop}
-                  width={1900}
-                  height={1840}
+                  width={image.width}
+                  height={image.height}
                 />
 
                 <img
-                  class={`w-full object-cover ${SCALE[image.scale]}`}
+                  class={`w-full h-full object-cover ${SCALE[image.scale]}`}
                   loading={"lazy"}
                   src={image.desktop}
                   alt={image.altImage}

@@ -20,7 +20,7 @@ export default function BannnerGrid({
   text,
 }: Props) {
   return (
-    <div class="w-full bg-[#1E2D32] px-[30px] lg:px-[100px] py-[100px]">
+    <div class="w-full bg-[#1E2D32] px-[30px] lg:px-[100px] py-[20px]">
       <section class="flex flex-col lg:flex-row justify-between items-center w-full mx-auto lg:min-h-[640px]">
         <div class=" flex flex-col justify-center items-center lg:items-start gap-2 lg:max-w-[690px] ">
           <div class="flex  flex-col text-center lg:text-left text-2xl lg:text-5xl ">
