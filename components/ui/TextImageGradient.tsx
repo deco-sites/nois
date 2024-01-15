@@ -8,14 +8,16 @@ export interface Props {
   image?: Img;
   texts?: Text[];
   text?: Text;
+  degrade:boolean;
+
 }
 export type Img = {
   desktop: LiveImage;
   mobile?: LiveImage;
   width: number;
   widthMobile: number;
-  height:number;
-  heightMobile:number;
+  height: number;
+  heightMobile: number;
 
   altImage?: string;
   scale: "1" | "1.05" | "1.10" | "1.25" | "1.5";
@@ -90,10 +92,10 @@ const COLOR = {
     "text-transparent  bg-clip-text bg-gradient-to-t from-[#9990FF] to-[#76DBD3]",
 };
 
-export default function BannnerGrid({ text, image, texts }: Props) {
+export default function BannnerGrid({ text, image, texts,degrade }: Props) {
   return (
-    <div class="w-full  bg-[#1E2D32]   py-20">
-      <section class="flex flex-col lg:flex-row justify-center lg:justify-between items-center w-full  bg-gradient-to-b from-[#9990FF]  to-[#76DBD3] px-[30px] lg:px-[100px] py-[50px] lg:py-[0px] lg:rounded-b-[50px] ">
+    <div class={`w-full  ${degrade ? (" bg-gradient-to-b from-[#1E2D32] via-[#9990FF] to-[#76DBD3]" ):("bg-[#1E2D32]" )} py-20`}>
+      <section class="flex flex-col lg:flex-row justify-center lg:justify-between items-center w-full   px-[30px] lg:px-[100px] py-[50px] lg:py-[0px] lg:rounded-b-[50px] ">
         <div class=" flex flex-col justify-center items-center lg:items-start gap-2 lg:max-w-[540px] mb-5">
           <div class="hidden lg:flex  flex-col text-center lg:text-left mb-5 lg:mb-10 w-full">
             <span class=" ">

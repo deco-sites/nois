@@ -79,7 +79,7 @@ function CardItem(
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Instagram logo"
-      class={'w-1/2 justify-center  flex mb-[10px] lg:mb-0  lg:w-[350px] lg:h-[ 350px]'}
+      class={"w-1/2 justify-center  flex mb-[10px] lg:mb-0  lg:w-[350px] lg:h-[ 350px]"}
     >
       <div
         class={`flex flex-col lg:m-10 border  w-[125px] h-[125px]  lg:w-[250px] lg:h-[250px] justify-center items-center ${
@@ -134,9 +134,9 @@ function CardsCamps(
             class={`w-full flex my-10 text-white justify-center items-center text-center text-3xl lg:text-5xl gap-2 px-5`}
           >
             <p>
-              <span>Nossos</span> <span class={`text-[#9990ff] font-bold`}>Clientes</span>
-              {" "}
-              e <span class={`text-[#76DBD3] font-bold`}>Parceiros</span>
+              <span>Nossos</span>{" "}
+              <span class={`text-[#9990ff] font-bold`}>Clientes</span> e{" "}
+              <span class={`text-[#76DBD3] font-bold`}>Parceiros</span>
             </p>
           </div>
           <div class="flex flex-row flex-wrap justify-center items-center lg:justify-center ">

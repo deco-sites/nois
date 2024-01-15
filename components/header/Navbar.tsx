@@ -61,8 +61,6 @@ function Navbar(
         </div> */
         }
 
-      
-
         <div class="flex-none  flex  shrink-0 justify-start">
           <a href="/" aria-label="Page logo" class="block w-[120px]  ">
             <img

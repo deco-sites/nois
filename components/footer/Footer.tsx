@@ -99,7 +99,7 @@ function Footer(
               ))}
             </ul>
 
-            <div class=" flex flex-row justify-between w-full items-end gap-6 text-xs lg:text-xl shrink-0">
+            <div class=" flex flex-row justify-start w-full items-end gap-6 text-xs lg:text-xl shrink-0">
               <div class="flex flex-row items-end gap-10">
                 <a
                   href="/"
@@ -157,22 +157,7 @@ function Footer(
 
         <div class="w-full ">
           <FooterContainer class="flex flex-row justify-between w-full">
-            <div class="flex flex-row items-end text-end gap-10">
-              <span class="text-xs lg:text-base">
-                Powered by{" "}
-                <a href="deco.cx" target="_blank">
-                  <Icon
-                    class="text-[#76DBD3] inline ml-2"
-                    width={60}
-                    height={27}
-                    id="Deco"
-                    strokeWidth={1}
-                  />
-                </a>
-              </span>
-            </div>
-            <div class="flex flex-row object-center justify-start items-end text-end gap-5 pr-">
-              <a
+          <a
                 href="https://deco.cx"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -199,7 +184,7 @@ function Footer(
                   strokeWidth={1}
                 />
               </a>
-            </div>
+          
           </FooterContainer>
         </div>
       </footer>
