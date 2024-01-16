@@ -1,6 +1,5 @@
 import { Picture, Source } from "deco-sites/std/components/Picture.tsx";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
-import Image from "deco-sites/std/components/Image.tsx";
 
 // Checar altura, e sopreposição da image
 
@@ -94,7 +93,8 @@ const COLOR = {
 
 export default function BannnerGrid({ text, image, texts,degrade }: Props) {
   return (
-    <div class={`w-full  ${degrade ? (" bg-gradient-to-b from-[#1E2D32] via-[#9990FF] to-[#76DBD3]" ):("bg-[#1E2D32]" )} py-20`}>
+  <div class="bg-[#1E2D32]">
+    <div class={`w-full  ${degrade ? (" bg-gradient-to-b from-[#1E2D32] via-[#9990FF] to-[#76DBD3]" ):("bg-[#1E2D32]" )} py-20 lg:rounded-b-[50px]`}>
       <section class="flex flex-col lg:flex-row justify-center lg:justify-between items-center w-full   px-[30px] lg:px-[100px] py-[50px] lg:py-[0px] lg:rounded-b-[50px] ">
         <div class=" flex flex-col justify-center items-center lg:items-start gap-2 lg:max-w-[540px] mb-5">
           <div class="hidden lg:flex  flex-col text-center lg:text-left mb-5 lg:mb-10 w-full">
@@ -191,6 +191,7 @@ export default function BannnerGrid({ text, image, texts,degrade }: Props) {
             )}
         </div>
       </section>
+    </div>
     </div>
   );
 }
